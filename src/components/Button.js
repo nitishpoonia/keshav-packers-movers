@@ -3,18 +3,19 @@
 
 import { motion } from "framer-motion";
 
-export default function Button({ onClick, title }) {
+export default function Button({ title, onClick, className }) {
   return (
     <motion.button
       onClick={onClick}
-      className="
+      className={`
         bg-gradient-to-r from-primary to-secondary 
-        text-white font-poppins font-poppinsBold text-small 
-        px-4 py-2 rounded-lg 
-        cursor-pointer
+        text-white font-poppins font-poppinsSemiBold text-small md:text-body 
+        px-4 py-2 md:px-6 md:py-3 rounded-lg 
+        cursor-pointer 
         shadow-[0_4px_8px_rgba(0,0,0,0)] 
         hover:shadow-[0_4px_8px_rgba(0,0,0,0.15)]
-      "
+        ${className || ""}
+      `}
       initial={{
         scale: 1,
         background: "linear-gradient(to right, #FF5733, #FF9166)",

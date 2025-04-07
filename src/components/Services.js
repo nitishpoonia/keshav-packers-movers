@@ -1,6 +1,7 @@
 // src/components/Services.js
 import Image from "next/image";
 import ServiceCard from "./ServiceCard";
+import ServicesCTA from "./ServicesCTA";
 
 export default function Services() {
   const services = [
@@ -40,12 +41,13 @@ export default function Services() {
   return (
     <section className="relative py-12 ">
       {/* Background Wave Pattern */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 top-0 h-[800px]">
         <Image
+          className="w-full h-[250px]"
           src="/assets/images/service/service-wave-pattern.svg"
           alt="Wave Pattern"
           fill
-          style={{ objectFit: "cover" }}
+          style={{ objectFit: "cover", objectPosition: "top" }}
         />
       </div>
 
@@ -75,6 +77,7 @@ export default function Services() {
             />
           ))}
         </div>
+        <ServicesCTA />
       </div>
     </section>
   );
