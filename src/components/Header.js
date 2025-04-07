@@ -6,11 +6,12 @@ import Image from "next/image";
 import Button from "./Button";
 import useHeaderLogic from "../hooks/useHeaderLogic";
 import { useLocation } from "../context/LocationContext";
+import { useContactForm } from "@/context/ContactFormContext";
 
 export default function Header() {
   const { city } = useLocation();
   const { isModalOpen, toggleModal } = useHeaderLogic();
-
+  const { openForm } = useContactForm();
   return (
     <header className="bg-[#333] text-white p-4">
       <nav className="container mx-auto flex justify-between items-center">
@@ -24,7 +25,7 @@ export default function Header() {
         {/* Right Side: Button, City with Icon (Hidden on Mobile), Hamburger Menu */}
         <div className="flex items-center space-x-4">
           {/* Get a Quote Button */}
-          <Button title="Get a Quote" />
+          <Button onClick={openForm} title="Get a Quote" />
 
           {/* City with Location Pin Icon (Hidden on Mobile) */}
           <div className="hidden md:flex items-center space-x-1">

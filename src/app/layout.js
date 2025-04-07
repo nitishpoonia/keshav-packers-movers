@@ -2,7 +2,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { LocationProvider } from "../context/LocationContext";
 import "./globals.css";
-
+import { ContactFormProvider } from "@/context/ContactFormContext";
 
 export const metadata = {
   title: "Keshav Packers and Movers",
@@ -14,9 +14,11 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <LocationProvider>
-          <Header />
-          {children}
-          <Footer />
+          <ContactFormProvider>
+            <Header />
+            {children}
+            <Footer />
+          </ContactFormProvider>
         </LocationProvider>
       </body>
     </html>

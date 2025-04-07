@@ -3,9 +3,10 @@
 
 import { motion } from "framer-motion";
 
-export default function Button({ title }) {
+export default function Button({ onClick, title }) {
   return (
     <motion.button
+      onClick={onClick}
       className="
         bg-gradient-to-r from-primary to-secondary 
         text-white font-poppins font-poppinsBold text-small 
