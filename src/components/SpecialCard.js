@@ -23,7 +23,7 @@ export default function SpecialCard({ scrollYProgress }) {
       className="mt-8 max-w-md mx-auto bg-white rounded-[12px] p-6 flex flex-col items-center text-center drop-shadow-[0_4px_8px_rgba(0,0,0,0.15)]"
     >
       <h3 className="text-subheading md:text-[22px] font-poppins font-poppinsBold text-textDark">
-        Can't find what you were looking for?
+        Can&apos;t find what you were looking for?
       </h3>
       <div className="mt-4">
         <GetQuoteButton scrollYProgress={scrollYProgress} />

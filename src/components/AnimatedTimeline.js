@@ -20,13 +20,37 @@ export default function AnimatedTimeline({ steps, scrollYProgress }) {
     useTransform(scrollYProgress, [0.15, 0.3], [0, 1], { clamp: true }),
   ];
 
-  // Add a spring effect for smoothness
-  const scaleSprings = scales.map((scale) =>
-    useSpring(scale, { stiffness: 100, damping: 30 })
-  );
-  const opacitySprings = opacities.map((opacity) =>
-    useSpring(opacity, { stiffness: 100, damping: 30 })
-  );
+  // Add a spring effect for smoothness at the top level
+  const scaleSpring0 = useSpring(scales[0], { stiffness: 100, damping: 30 });
+  const scaleSpring1 = useSpring(scales[1], { stiffness: 100, damping: 30 });
+  const scaleSpring2 = useSpring(scales[2], { stiffness: 100, damping: 30 });
+  const scaleSpring3 = useSpring(scales[3], { stiffness: 100, damping: 30 });
+
+  const opacitySpring0 = useSpring(opacities[0], {
+    stiffness: 100,
+    damping: 30,
+  });
+  const opacitySpring1 = useSpring(opacities[1], {
+    stiffness: 100,
+    damping: 30,
+  });
+  const opacitySpring2 = useSpring(opacities[2], {
+    stiffness: 100,
+    damping: 30,
+  });
+  const opacitySpring3 = useSpring(opacities[3], {
+    stiffness: 100,
+    damping: 30,
+  });
+
+  // Create arrays of springs for easy indexing
+  const scaleSprings = [scaleSpring0, scaleSpring1, scaleSpring2, scaleSpring3];
+  const opacitySprings = [
+    opacitySpring0,
+    opacitySpring1,
+    opacitySpring2,
+    opacitySpring3,
+  ];
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
