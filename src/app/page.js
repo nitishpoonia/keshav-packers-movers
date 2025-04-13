@@ -3,6 +3,8 @@ import FloatingButton from "../components/FloatingButton";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
 import WhyChooseKeshav from "@/components/WhyChooseKeshav";
+import OurProcessWrapper from "@/components/OurProcessWrapper";
+import EstimatedMovingCostsWrapper from "@/components/EstimatedMovingCostsWrapper";
 // src/app/page.js
 export default function Home() {
   return (
@@ -10,6 +12,8 @@ export default function Home() {
       <Hero />
       <Services />
       <WhyChooseKeshav />
+      <OurProcessWrapper />
+      <EstimatedMovingCostsWrapper />
       <ContactForm />
       <FloatingButton />
     </div>
