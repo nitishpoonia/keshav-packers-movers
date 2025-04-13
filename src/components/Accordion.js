@@ -5,7 +5,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
-export default function Accordion({ title, prices }) {
+export default function Accordion({ title, prices, content }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -15,7 +15,7 @@ export default function Accordion({ title, prices }) {
         onClick={() => setIsOpen(!isOpen)}
         className="w-full p-4 flex justify-between items-center focus:outline-none"
       >
-        <h3 className="text-subheading md:text-[22px] font-poppins font-poppinsBold text-textDark">
+        <h3 className="text-subheading text-left md:text-[22px] font-poppins font-poppinsSemiBold text-textDark">
           {title}
         </h3>
         <motion.div
@@ -42,19 +42,25 @@ export default function Accordion({ title, prices }) {
             className="overflow-hidden"
           >
             <div className="p-4 pt-0">
-              {prices.map((price, index) => (
-                <div
-                  key={index}
-                  className="flex justify-between py-2 border-t border-gray-200 first:border-t-0"
-                >
-                  <span className="text-[14px] sm:text-[16px] font-poppins font-poppinsRegular text-textMedium">
-                    {price.distance}
-                  </span>
-                  <span className="text-[14px] sm:text-[16px] font-poppins font-poppinsBold text-textDark">
-                    {price.cost}
-                  </span>
-                </div>
-              ))}
+              {prices ? (
+                prices.map((price, index) => (
+                  <div
+                    key={index}
+                    className="flex justify-between py-2 border-t border-gray-200 first:border-t-0"
+                  >
+                    <span className="text-[14px] sm:text-[16px] font-poppins font-poppinsRegular text-textMedium">
+                      {price.distance}
+                    </span>
+                    <span className="text-[14px] sm:text-[16px] font-poppins font-poppinsBold text-textDark">
+                      {price.cost}
+                    </span>
+                  </div>
+                ))
+              ) : (
+                <p className="text-[14px] sm:text-[16px] font-poppins font-poppinsRegular text-textMedium">
+                  {content}
+                </p>
+              )}
             </div>
           </motion.div>
         )}

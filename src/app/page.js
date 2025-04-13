@@ -5,6 +5,8 @@ import Services from "@/components/Services";
 import WhyChooseKeshav from "@/components/WhyChooseKeshav";
 import OurProcessWrapper from "@/components/OurProcessWrapper";
 import EstimatedMovingCostsWrapper from "@/components/EstimatedMovingCostsWrapper";
+import InlineContactForm from "@/components/InlineContactForm";
+import FAQs from "@/components/FAQs";
 // src/app/page.js
 export default function Home() {
   return (
@@ -14,6 +16,8 @@ export default function Home() {
       <WhyChooseKeshav />
       <OurProcessWrapper />
       <EstimatedMovingCostsWrapper />
+      <InlineContactForm />
+      <FAQs />
       <ContactForm />
       <FloatingButton />
     </div>
