@@ -12,12 +12,12 @@ export default function ServiceCard({
   return (
     <article className="relative bg-lightPeach rounded-[12px] overflow-hidden shadow-lg max-w-[500px] sm:max-w-[350px] md:max-w-[500px] mx-auto">
       {/* Image (Fixed height) */}
-      <div className="relative h-[160px]">
+      <div className="relative h-[180px]">
         <Image
           src={image}
           alt={title}
           fill
-          style={{ objectFit: "cover" }}
+          style={{ objectFit: "contain" }}
           className="rounded-t-[12px]"
         />
       </div>

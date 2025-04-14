@@ -9,7 +9,7 @@ export default function Accordion({ title, prices, content }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="mb-4 bg-lightPeach rounded-[12px] drop-shadow-[0_4px_8px_rgba(0,0,0,0.15)]">
+    <div className="mb-4 bg-white rounded-[12px] drop-shadow-[0_4px_8px_rgba(0,0,0,0.15)]">
       {/* Accordion Header */}
       <button
         onClick={() => setIsOpen(!isOpen)}

@@ -1,6 +1,5 @@
 // src/components/EstimatedMovingCosts.js
 import Accordion from "./Accordion";
-import GetQuoteButton from "./GetQuoteButton";
 import SpecialCard from "./SpecialCard";
 
 export default function EstimatedMovingCosts({ scrollYProgress }) {

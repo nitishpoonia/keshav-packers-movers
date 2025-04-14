@@ -1,7 +1,7 @@
 // src/components/ContactFormModal.js
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useLocation } from "../context/LocationContext";
 import { useContactForm } from "../context/ContactFormContext";
 import { motion } from "framer-motion";
@@ -45,7 +45,18 @@ export default function ContactFormModal() {
     console.log("Form submitted:", formData);
     closeForm();
   };
+  // Log state updates
+  console.log("isFormOpen:", isFormOpen);
+  console.log("city:", city);
+  console.log("formData:", formData);
+  console.log("isMovingTimeOpen:", isMovingTimeOpen);
+  console.log("isServiceOpen:", isServiceOpen);
 
+  // Set formData.from when city changes
+  useEffect(() => {
+    console.log("Setting formData.from to:", city || "");
+    setFormData((prev) => ({ ...prev, from: city || "" }));
+  }, [city]);
   if (!isFormOpen) return null;
 
   return (
@@ -65,7 +76,7 @@ export default function ContactFormModal() {
         transition={{ duration: 0.5, ease: "easeInOut" }}
       >
         {/* Cross Icon */}
-        <div className="absolute top-4 right-4 cursor-pointer">
+         <div className="absolute top-4 right-4 cursor-pointer">
           <button className="cursor-pointer" onClick={() => closeForm()}>
             <Image
               src="/assets/icons/cross.svg"
@@ -77,12 +88,11 @@ export default function ContactFormModal() {
           </button>
         </div>
 
-        {/* Heading */}
         <h2 className="text-subheading md:text-[24px] font-poppins font-poppinsBold text-primary text-center drop-shadow-[0_2px_4px_rgba(0,0,0,0.1)]">
           Get Your Quote Today
         </h2>
 
-        {/* Form */}
+
         <form onSubmit={handleSubmit} className="mt-4 space-y-4">
           {/* From */}
           <div>

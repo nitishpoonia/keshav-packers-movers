@@ -6,10 +6,10 @@ import GetQuoteButton from "./GetQuoteButton";
 
 export default function SpecialCard({ scrollYProgress }) {
   // Use a scroll progress range to animate the special card
-  const scale = useTransform(scrollYProgress, [0.5, 0.7], [0, 1], {
+  const scale = useTransform(scrollYProgress, [0.3, 0.5], [0, 1], {
     clamp: true,
   });
-  const opacity = useTransform(scrollYProgress, [0.5, 0.7], [0, 1], {
+  const opacity = useTransform(scrollYProgress, [0.3, 0.5], [0, 1], {
     clamp: true,
   });
 

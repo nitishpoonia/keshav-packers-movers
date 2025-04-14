@@ -8,10 +8,17 @@ const ContactFormContext = createContext();
 export function ContactFormProvider({ children }) {
   const [isFormOpen, setIsFormOpen] = useState(false);
 
-  const openForm = () => setIsFormOpen(true);
-  const closeForm = () => setIsFormOpen(false);
-console.log('isFormopen', isFormOpen);
+  console.log("isFormopen", isFormOpen);
+  const openForm = () => {
+    console.log("openForm called");
+    setIsFormOpen(true);
+  };
+  const closeForm = () => {
+    console.log("closeForm called");
+    setIsFormOpen(false);
+  };
 
+  console.log("ContactFormProvider rendered, isFormOpen:", isFormOpen);
   return (
     <ContactFormContext.Provider value={{ isFormOpen, openForm, closeForm }}>
       {children}

@@ -5,7 +5,7 @@ import { useState } from "react";
 import { useLocation } from "../context/LocationContext";
 import Image from "next/image";
 
-export default function InlineContactForm() {
+export default function InlineContactForm({}) {
   const { city } = useLocation();
   const [formData, setFormData] = useState({
     from: city || "",

@@ -27,3 +27,20 @@
   --font-weight-poppinsBold: 700;
   --font-weight-poppinsSemiBold: 500;
 }
+/* app/globals.css */
+.state-cities {
+  display: block; /* Visible by default for SEO and non-JS */
+}
+
+/* Hide cities initially on client side until JS runs */
+[data-js-loaded] .state-cities {
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+
+/* When expanded, show the cities */
+[data-js-loaded] .state-cities.expanded {
+  height: auto;
+  opacity: 1;
+}

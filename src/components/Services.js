@@ -9,7 +9,7 @@ export default function Services() {
       image: "/assets/images/service/bike-car-relocation.png",
       title: "Bike/Car Relocation",
       description:
-        "Safe and secure transport for your vehicles, ensuring they arrive in perfect condition.",
+        "Ensure the safe and secure transport of your vehicles with our expert relocation services. We handle everything from bikes to cars, guaranteeing they arrive in perfect condition, no matter the distance.",
       ctaText: "Secure Transport",
       link: "/services/bike-car-relocation",
     },
@@ -17,7 +17,7 @@ export default function Services() {
       image: "/assets/images/service/home-relocation.png",
       title: "Home Relocation",
       description:
-        "Hassle-free shifting for your home, with careful handling of all your belongings.",
+        "Experience hassle-free home shifting with our dedicated team. We provide careful handling of all your belongings, from furniture to fragile items, ensuring a smooth transition to your new home.",
       ctaText: "Learn More",
       link: "/services/home-relocation",
     },
@@ -25,7 +25,7 @@ export default function Services() {
       image: "/assets/images/service/office-relocation.png",
       title: "Office Relocation",
       description:
-        "Efficient moving for your business, minimizing downtime and ensuring a smooth transition.",
+        "Relocate your business with minimal downtime. Our efficient moving services ensure a smooth transition for your office, handling equipment, furniture, and documents with care and precision.",
       ctaText: "Plan your Move",
       link: "/services/office-relocation",
     },
@@ -33,7 +33,7 @@ export default function Services() {
       image: "/assets/images/service/storage-solutions.png",
       title: "Storage Solutions",
       description:
-        "Secure storage for your belongings, with flexible options to suit your needs.",
+        "Store your belongings securely with our flexible storage options. Whether you need short-term or long-term storage, we provide safe, climate-controlled solutions tailored to your needs.",
       ctaText: "Store with Ease",
       link: "/services/storage-solutions",
     },
