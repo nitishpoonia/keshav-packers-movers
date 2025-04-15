@@ -27,20 +27,118 @@
   --font-weight-poppinsBold: 700;
   --font-weight-poppinsSemiBold: 500;
 }
-/* app/globals.css */
+/* Existing styles for state-cities */
 .state-cities {
-  display: block; /* Visible by default for SEO and non-JS */
+  display: block;
+  max-height: none;
+  opacity: 1;
+  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
-/* Hide cities initially on client side until JS runs */
 [data-js-loaded] .state-cities {
-  height: 0;
+  max-height: 0;
   opacity: 0;
   overflow: hidden;
 }
 
-/* When expanded, show the cities */
-[data-js-loaded] .state-cities.expanded {
-  height: auto;
+[data-js-loaded] .state-cities.max-h-[500px] {
+  max-height: 500px;
+  opacity: 1;
+}
+
+/* Header Styles */
+header.sticky {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Dropdown Menu (Desktop) */
+nav .relative:hover > div {
+  opacity: 1;
+  visibility: visible;
+}
+
+nav .relative > div {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+}
+
+/* Modal (Mobile) */
+@media (max-width: 767px) {
+  .modal-content {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    background-color: white;
+    padding: 24px;
+  }
+}
+
+/* Fix Layout Distortion on Tablet Screens */
+@media (min-width: 640px) and (max-width: 767px) {
+  nav {
+    padding: 0 16px;
+  }
+
+  nav .container {
+    max-width: 100%;
+  }
+
+  nav .flex.items-center.space-x-2 {
+    gap: 8px;
+  }
+}
+
+/* Hamburger Menu (Always Visible on Mobile) */
+nav button.hamburger-menu {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+nav button.hamburger-menu div {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+nav button.hamburger-menu span.hamburger-bar {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* Remove any hover-based visibility */
+nav button.hamburger-menu:hover,
+nav button.hamburger-menu:hover div,
+nav button.hamburger-menu:hover span.hamburger-bar {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* Ensure no conflicting styles on mobile */
+@media (max-width: 767px) {
+  nav button.hamburger-menu,
+  nav button.hamburger-menu div,
+  nav button.hamburger-menu span.hamburger-bar {
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+}
+
+.faq-answer {
+  display: block;
+  max-height: none;
+  opacity: 1;
+  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.faq-answer.max-h-0 {
+  max-height: 0;
+  opacity: 0;
+}
+
+.faq-answer.max-h-[500px] {
+  max-height: 500px;
   opacity: 1;
 }
