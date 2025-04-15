@@ -85,9 +85,6 @@ export default function FAQPage() {
         Find answers to common questions about our packing and moving services
         across India. Need more help? Request a free quote today!
       </p>
-      <div className="flex justify-center mt-6">
-        <InlineContactForm />
-      </div>
 
       {/* FAQ List */}
       <div className="mt-12 space-y-4">
@@ -107,12 +104,7 @@ export default function FAQPage() {
         </p>
         <div className="flex justify-center mt-4 space-x-4">
           <InlineContactForm />
-          <Link
-            href="/contact"
-            className="bg-gray-700 text-white font-poppins font-poppinsSemiBold text-[14px] sm:text-[16px] md:text-[18px] px-4 py-2 sm:px-6 sm:py-3 rounded-lg cursor-pointer shadow-[0_4px_6px_rgba(0,0,0,0.1)] hover:shadow-[0_4px_6px_rgba(0,0,0,0.15)]"
-          >
-            Contact Us
-          </Link>
+         
         </div>
       </div>
 

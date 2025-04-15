@@ -1,55 +1,60 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
 export default function FAQItem({ question, answer }) {
   const [isExpanded, setIsExpanded] = useState(false);
-  const [jsLoaded, setJsLoaded] = useState(false);
-
-  useEffect(() => {
-    setJsLoaded(true);
-  }, []);
 
   const toggleExpand = () => {
     setIsExpanded((prev) => !prev);
   };
 
   return (
-    <div className="border border-gray-300 rounded-lg">
+    <div className="mb-4 bg-white rounded-[12px] drop-shadow-[0_4px_8px_rgba(0,0,0,0.15)]">
       {/* Question Header with Toggle */}
       <button
         onClick={toggleExpand}
-        className="w-full flex justify-between items-center p-4 bg-gray-100 rounded-t-lg hover:bg-gray-200 focus:outline-none"
+        className="w-full p-4 flex justify-between items-center focus:outline-none hover:bg-gray-50 transition-colors duration-300"
         aria-expanded={isExpanded}
         aria-controls={`faq-answer-${question
           .replace(/\s+/g, "-")
           .toLowerCase()}`}
       >
-        <span className="text-[16px] md:text-[18px] font-poppins font-poppinsSemiBold text-textDark">
+        <h3 className="text-subheading text-left md:text-[22px] font-poppins font-poppinsSemiBold text-textDark">
           {question}
-        </span>
-        <Image
-          src="/assets/icons/dropdown-arrow.svg"
-          alt="Toggle Answer"
-          width={16}
-          height={16}
-          className={`transform transition-transform duration-300 ${
-            isExpanded ? "rotate-180" : ""
-          }`}
-        />
+        </h3>
+        <motion.div
+          animate={{ rotate: isExpanded ? 180 : 0 }}
+          transition={{ duration: 0.3 }}
+        >
+          <Image
+            src="/assets/icons/arrow-down.svg"
+            alt="Toggle Answer"
+            width={20}
+            height={20}
+          />
+        </motion.div>
       </button>
       {/* Answer (Expandable) */}
-      <div
-        id={`faq-answer-${question.replace(/\s+/g, "-").toLowerCase()}`}
-        className={`faq-answer p-4 bg-white rounded-b-lg overflow-hidden transition-all duration-300 ease-in-out ${
-          isExpanded ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
-        } ${jsLoaded ? "" : "max-h-[500px] opacity-100"}`}
-      >
-        <p className="text-[14px] md:text-[16px] font-poppins font-poppinsRegular text-textMedium">
-          {answer}
-        </p>
-      </div>
+      <AnimatePresence>
+        {isExpanded && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className="overflow-hidden"
+          >
+            <div className="p-4 pt-0">
+              <p className="text-[14px] sm:text-[16px] font-poppins font-poppinsRegular text-textMedium">
+                {answer}
+              </p>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
