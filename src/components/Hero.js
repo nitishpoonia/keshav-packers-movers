@@ -4,14 +4,15 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import { useContactForm } from "@/context/ContactFormContext";
 
 export default function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0);
-
+const { openForm } = useContactForm();
   const slides = [
-    { image: "/assets/images/hero/hero1.png" },
-    { image: "/assets/images/hero/hero2.png" },
-    { image: "/assets/images/hero/hero3.png" },
+    { image: "/assets/images/hero/hero1.jpeg" },
+    { image: "/assets/images/hero/hero2.jpeg" },
+    { image: "/assets/images/hero/hero3.jpeg" },
   ];
 
   useEffect(() => {
@@ -69,6 +70,7 @@ export default function Hero() {
               shadow-[0_4px_6px_rgba(0,0,0,0.1)] 
               hover:shadow-[0_4px_6px_rgba(0,0,0,0.15)]
             "
+            onClick={openForm}
             initial={{
               background: "linear-gradient(to right, #FF5733, #FF9166)",
             }}

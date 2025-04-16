@@ -1,223 +1,275 @@
-// src/components/ContactFormModal.js
 "use client";
 
-import { useEffect, useState } from "react";
-import { useLocation } from "../context/LocationContext";
-import { useContactForm } from "../context/ContactFormContext";
-import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
 import Image from "next/image";
+import { useContactForm } from "@/context/ContactFormContext";
+import { useLocation } from "@/context/LocationContext";
 
 export default function ContactFormModal() {
-  const { city } = useLocation();
   const { isFormOpen, closeForm } = useContactForm();
+  const { city } = useLocation();
+
   const [formData, setFormData] = useState({
-    from: city || "",
-    to: "",
+    fromCity: "",
+    toCity: "",
     phone: "",
     movingTime: "",
-    service: "",
+    serviceType: "",
   });
-  const [isMovingTimeOpen, setIsMovingTimeOpen] = useState(false);
-  const [isServiceOpen, setIsServiceOpen] = useState(false);
+  const [submissionStatus, setSubmissionStatus] = useState(null);
+  const [errorMessage, setErrorMessage] = useState("");
+  const [isLoading, setIsLoading] = useState(false); // Add loading state
 
-  // Dropdown options (easily editable)
-  const movingTimeOptions = [
-    "Within 1 Week",
-    "Within 2 Weeks",
-    "Within 1 Month",
-    "More than 1 Month",
-  ];
-
-  const serviceOptions = [
-    "Bike/Car Relocation",
-    "Home Relocation",
-    "Office Relocation",
-    "Storage Solutions",
-  ];
+  useEffect(() => {
+    if (city) {
+      setFormData((prev) => ({ ...prev, fromCity: city }));
+    }
+  }, [city]);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    closeForm();
-  };
-  // Log state updates
-  console.log("isFormOpen:", isFormOpen);
-  console.log("city:", city);
-  console.log("formData:", formData);
-  console.log("isMovingTimeOpen:", isMovingTimeOpen);
-  console.log("isServiceOpen:", isServiceOpen);
+    setSubmissionStatus(null);
+    setErrorMessage("");
+    setIsLoading(true); // Set loading state to true
 
-  // Set formData.from when city changes
-  useEffect(() => {
-    console.log("Setting formData.from to:", city || "");
-    setFormData((prev) => ({ ...prev, from: city || "" }));
-  }, [city]);
+    try {
+      const response = await fetch("/api/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: "User", // ContactFormModal doesn't collect name; using placeholder
+          email: "Not provided", // ContactFormModal doesn't collect email
+          phone: formData.phone,
+          subject: "Contact Form Modal Submission",
+          fromCity: formData.fromCity,
+          toCity: formData.toCity,
+          movingTime: formData.movingTime,
+          serviceType: formData.serviceType,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to send email");
+      }
+
+      setSubmissionStatus("success");
+      setFormData({
+        fromCity: city || "",
+        toCity: "",
+        phone: "",
+        movingTime: "",
+        serviceType: "",
+      });
+    } catch (error) {
+      setSubmissionStatus("error");
+      setErrorMessage("Failed to send your request. Please try again later.");
+    } finally {
+      setIsLoading(false); // Reset loading state
+    }
+  };
+
   if (!isFormOpen) return null;
 
   return (
-    <motion.div
-      key="modal"
-      className="fixed inset-0 bg-black bg-opacity-10 flex items-center justify-center z-50"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.3 }}
-    >
-      <motion.div
-        className="bg-lightPeach p-6 rounded-lg w-[90%] max-w-md relative"
-        initial={{ y: "-100vh" }}
-        animate={{ y: 0 }}
-        exit={{ y: "-100vh" }}
-        transition={{ duration: 0.5, ease: "easeInOut" }}
-      >
-        {/* Cross Icon */}
-         <div className="absolute top-4 right-4 cursor-pointer">
-          <button className="cursor-pointer" onClick={() => closeForm()}>
-            <Image
-              src="/assets/icons/cross.svg"
-              alt="Close Form"
-              width={24}
-              height={24}
-              className="hover:opacity-80"
-            />
-          </button>
-        </div>
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+      <div className="bg-white p-6 rounded-lg w-full max-w-md relative">
+        {/* Close Button */}
+        <button
+          onClick={closeForm}
+          className="absolute top-4 right-4 text-textDark focus:outline-none"
+          aria-label="Close contact form modal"
+        >
+          <Image
+            src="/assets/icons/cross.svg"
+            alt="Close Modal"
+            width={24}
+            height={24}
+          />
+        </button>
 
-        <h2 className="text-subheading md:text-[24px] font-poppins font-poppinsBold text-primary text-center drop-shadow-[0_2px_4px_rgba(0,0,0,0.1)]">
-          Get Your Quote Today
-        </h2>
-
-
-        <form onSubmit={handleSubmit} className="mt-4 space-y-4">
-          {/* From */}
-          <div>
-            <input
-              type="text"
-              name="from"
-              value={formData.from}
-              onChange={handleInputChange}
-              placeholder="From (e.g., Delhi)"
-              className="w-full p-3 rounded-lg bg-white shadow-[0_2px_4px_rgba(0,0,0,0.1)] placeholder:text-textMedium text-[13px] font-poppins font-poppinsSemiBold text-textDark"
-            />
-          </div>
-
-          {/* To */}
-          <div>
-            <input
-              type="text"
-              name="to"
-              value={formData.to}
-              onChange={handleInputChange}
-              placeholder="To (e.g., Mumbai)"
-              className="w-full p-3 rounded-lg bg-white shadow-[0_2px_4px_rgba(0,0,0,0.1)] placeholder:text-textMedium text-[13px] font-poppins font-poppinsSemiBold text-textDark"
-            />
-          </div>
-
-          {/* Phone */}
-          <div>
-            <input
-              type="tel"
-              name="phone"
-              value={formData.phone}
-              onChange={handleInputChange}
-              placeholder="Phone"
-              className="w-full p-3 rounded-lg bg-white shadow-[0_2px_4px_rgba(0,0,0,0.1)] placeholder:text-textMedium text-[13px] font-poppins font-poppinsSemiBold text-textDark"
-            />
-          </div>
-
-          {/* Moving Time Dropdown */}
-          <div className="relative">
+        {submissionStatus === "success" ? (
+          <div className="text-center">
+            <h2 className="text-subheading font-poppins font-poppinsBold text-textDark mb-4">
+              Thank You!
+            </h2>
+            <p className="text-[14px] sm:text-[16px] font-poppins font-poppinsRegular text-textMedium mb-6">
+              Your request has been successfully submitted. We’ll get back to you soon with a personalized quote.
+            </p>
             <button
-              type="button"
-              onClick={() => setIsMovingTimeOpen(!isMovingTimeOpen)}
-              className="w-full p-3 rounded-lg bg-white shadow-[0_2px_4px_rgba(0,0,0,0.1)] text-[13px] font-poppins font-poppinsSemiBold text-textDark flex justify-between items-center"
+              onClick={closeForm}
+              className="bg-gradient-to-r from-primary to-secondary text-white font-poppins font-poppinsSemiBold text-[14px] sm:text-[16px] px-4 py-2 sm:px-6 sm:py-3 rounded-lg cursor-pointer shadow-[0_4px_6px_rgba(0,0,0,0.1)] hover:shadow-[0_4px_6px_rgba(0,0,0,0.15)]"
             >
-              <span>{formData.movingTime || "Moving Time"}</span>
-              <Image
-                src="/assets/icons/dropdown-arrow.svg"
-                alt="Dropdown Arrow"
-                width={16}
-                height={16}
-                className={`transform transition-transform duration-300 ${
-                  isMovingTimeOpen ? "rotate-180" : ""
-                }`}
-              />
+              Close
             </button>
-            {isMovingTimeOpen && (
-              <ul className="absolute w-full mt-1 bg-white border border-gray-300 rounded-lg shadow-lg z-10">
-                {movingTimeOptions.map((option) => (
-                  <li
-                    key={option}
-                    onClick={() => {
-                      setFormData((prev) => ({ ...prev, movingTime: option }));
-                      setIsMovingTimeOpen(false);
-                    }}
-                    className="p-3 text-[13px] font-poppins font-poppinsSemiBold text-textDark hover:bg-gray-100 cursor-pointer"
-                  >
-                    {option}
-                  </li>
-                ))}
-              </ul>
-            )}
           </div>
+        ) : (
+          <>
+            <h2 className="text-subheading font-poppins font-poppinsBold text-textDark mb-4">
+              Get a Free Quote
+            </h2>
+            <form onSubmit={handleSubmit} className="space-y-4">
+              {/* From City */}
+              <div>
+                <label
+                  htmlFor="fromCity"
+                  className="block text-[14px] md:text-[16px] font-poppins font-poppinsSemiBold text-textDark mb-1"
+                >
+                  From
+                </label>
+                <input
+                  type="text"
+                  id="fromCity"
+                  name="fromCity"
+                  value={formData.fromCity}
+                  onChange={handleInputChange}
+                  placeholder="Enter starting city"
+                  className="w-full p-3 rounded-lg bg-white shadow-[0_2px_4px_rgba(0,0,0,0.1)] placeholder:text-textMedium text-[13px] font-poppins font-poppinsRegular text-textDark focus:outline-none focus:ring-2 focus:ring-primary"
+                  required
+                />
+              </div>
 
-          {/* Select Service Dropdown */}
-          <div className="relative">
-            <button
-              type="button"
-              onClick={() => setIsServiceOpen(!isServiceOpen)}
-              className="w-full p-3 rounded-lg bg-white shadow-[0_2px_4px_rgba(0,0,0,0.1)] text-[13px] font-poppins font-poppinsSemiBold text-textDark flex justify-between items-center"
-            >
-              <span>{formData.service || "Select Service"}</span>
-              <Image
-                src="/assets/icons/dropdown-arrow.svg"
-                alt="Dropdown Arrow"
-                width={16}
-                height={16}
-                className={`transform transition-transform duration-300 ${
-                  isServiceOpen ? "rotate-180" : ""
+              {/* To City */}
+              <div>
+                <label
+                  htmlFor="toCity"
+                  className="block text-[14px] md:text-[16px] font-poppins font-poppinsSemiBold text-textDark mb-1"
+                >
+                  To
+                </label>
+                <input
+                  type="text"
+                  id="toCity"
+                  name="toCity"
+                  value={formData.toCity}
+                  onChange={handleInputChange}
+                  placeholder="Enter destination city"
+                  className="w-full p-3 rounded-lg bg-white shadow-[0_2px_4px_rgba(0,0,0,0.1)] placeholder:text-textMedium text-[13px] font-poppins font-poppinsRegular text-textDark focus:outline-none focus:ring-2 focus:ring-primary"
+                  required
+                />
+              </div>
+
+              {/* Phone */}
+              <div>
+                <label
+                  htmlFor="phone"
+                  className="block text-[14px] md:text-[16px] font-poppins font-poppinsSemiBold text-textDark mb-1"
+                >
+                  Phone
+                </label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleInputChange}
+                  placeholder="Enter your phone number"
+                  className="w-full p-3 rounded-lg bg-white shadow-[0_2px_4px_rgba(0,0,0,0.1)] placeholder:text-textMedium text-[13px] font-poppins font-poppinsRegular text-textDark focus:outline-none focus:ring-2 focus:ring-primary"
+                  required
+                />
+              </div>
+
+              {/* Moving Time */}
+              <div>
+                <label
+                  htmlFor="movingTime"
+                  className="block text-[14px] md:text-[16px] font-poppins font-poppinsSemiBold text-textDark mb-1"
+                >
+                  Moving Time
+                </label>
+                <select
+                  id="movingTime"
+                  name="movingTime"
+                  value={formData.movingTime}
+                  onChange={handleInputChange}
+                  className="w-full p-3 rounded-lg bg-white shadow-[0_2px_4px_rgba(0,0,0,0.1)] text-[13px] font-poppins font-poppinsRegular text-textDark focus:outline-none focus:ring-2 focus:ring-primary"
+                  required
+                >
+                  <option value="">Select moving time</option>
+                  <option value="Within 1 Month">Within 1 Month</option>
+                  <option value="1-3 Months">1-3 Months</option>
+                  <option value="3-6 Months">3-6 Months</option>
+                  <option value="More than 6 Months">More than 6 Months</option>
+                </select>
+              </div>
+
+              {/* Service Type */}
+              <div>
+                <label
+                  htmlFor="serviceType"
+                  className="block text-[14px] md:text-[16px] font-poppins font-poppinsSemiBold text-textDark mb-1"
+                >
+                  Service Type
+                </label>
+                <select
+                  id="serviceType"
+                  name="serviceType"
+                  value={formData.serviceType}
+                  onChange={handleInputChange}
+                  className="w-full p-3 rounded-lg bg-white shadow-[0_2px_4px_rgba(0,0,0,0.1)] text-[13px] font-poppins font-poppinsRegular text-textDark focus:outline-none focus:ring-2 focus:ring-primary"
+                  required
+                >
+                  <option value="">Select a service</option>
+                  <option value="Home Relocation">Home Relocation</option>
+                  <option value="Bike/Car Relocation">Bike/Car Relocation</option>
+                  <option value="Office Relocation">Office Relocation</option>
+                  <option value="Storage Solutions">Storage Solutions</option>
+                </select>
+              </div>
+
+              {/* Submit Button with Loading Indicator */}
+              <button
+                type="submit"
+                disabled={isLoading} // Disable button while loading
+                className={`w-full bg-gradient-to-r from-primary to-secondary text-white font-poppins font-poppinsSemiBold text-[14px] sm:text-[16px] md:text-[18px] px-4 py-2 sm:px-6 sm:py-3 rounded-lg cursor-pointer shadow-[0_4px_6px_rgba(0,0,0,0.1)] hover:shadow-[0_4px_6px_rgba(0,0,0,0.15)] flex justify-center items-center ${
+                  isLoading ? "opacity-75 cursor-not-allowed" : ""
                 }`}
-              />
-            </button>
-            {isServiceOpen && (
-              <ul className="absolute w-full mt-1 bg-white border border-gray-300 rounded-lg shadow-lg z-10">
-                {serviceOptions.map((option) => (
-                  <li
-                    key={option}
-                    onClick={() => {
-                      setFormData((prev) => ({ ...prev, service: option }));
-                      setIsServiceOpen(false);
-                    }}
-                    className="p-3 text-[13px] font-poppins font-poppinsSemiBold text-textDark hover:bg-gray-100 cursor-pointer"
-                  >
-                    {option}
-                  </li>
-                ))}
-              </ul>
-            )}
-          </div>
+              >
+                {isLoading ? (
+                  <>
+                    <svg
+                      className="animate-spin h-5 w-5 mr-2 text-white"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                    >
+                      <circle
+                        className="opacity-25"
+                        cx="12"
+                        cy="12"
+                        r="10"
+                        stroke="currentColor"
+                        strokeWidth="4"
+                      ></circle>
+                      <path
+                        className="opacity-75"
+                        fill="currentColor"
+                        d="M4 12a8 8 0 018-8v8H4z"
+                      ></path>
+                    </svg>
+                    Sending...
+                  </>
+                ) : (
+                  "Book a Call"
+                )}
+              </button>
 
-          {/* Submit Button */}
-          <button
-            type="submit"
-            className="
-              w-full bg-gradient-to-r from-primary to-secondary 
-              text-white font-poppins font-poppinsSemiBold text-[14px] sm:text-[16px] md:text-[18px] 
-              px-4 py-2 sm:px-6 sm:py-3 md:px-8 md:py-4 rounded-lg 
-              cursor-pointer 
-              shadow-[0_4px_6px_rgba(0,0,0,0.1)] 
-              hover:shadow-[0_4px_6px_rgba(0,0,0,0.15)]
-            "
-          >
-            Book A Call
-          </button>
-        </form>
-      </motion.div>
-    </motion.div>
+              {/* Error Message */}
+              {submissionStatus === "error" && (
+                <p className="text-[14px] font-poppins font-poppinsRegular text-red-500 mt-2">
+                  {errorMessage}
+                </p>
+              )}
+            </form>
+          </>
+        )}
+      </div>
+    </div>
   );
 }

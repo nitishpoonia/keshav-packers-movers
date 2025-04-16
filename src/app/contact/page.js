@@ -1,5 +1,4 @@
 import Link from "next/link";
-import ContactForm from "../../components/ContactForm";
 import FAQItem from "../../components/FAQItem";
 import InlineContactForm from "../../components/InlineContactForm";
 import Image from "next/image";
@@ -102,16 +101,21 @@ export default function ContactPage() {
               <h3 className="text-[16px] md:text-[18px] font-poppins font-poppinsSemiBold text-textDark">
                 Phone
               </h3>
-              <p className="text-[14px] md:text-[16px] font-poppins font-poppinsRegular text-textMedium">
-                +91 123-456-7890
-              </p>
+              <div>
+                <p className="text-[14px] md:text-[16px] font-poppins font-poppinsRegular text-textMedium">
+                  +91 7852000465
+                </p>
+                <p className="text-[14px] md:text-[16px] font-poppins font-poppinsRegular text-textMedium">
+                  +91 7568428665
+                </p>
+              </div>
             </div>
             <div>
               <h3 className="text-[16px] md:text-[18px] font-poppins font-poppinsSemiBold text-textDark">
                 Email
               </h3>
               <p className="text-[14px] md:text-[16px] font-poppins font-poppinsRegular text-textMedium">
-                contact@keshavpackers.com
+                keshavpackerandmovers@gmail.com
               </p>
             </div>
             <div>
@@ -189,13 +193,6 @@ export default function ContactPage() {
 
       {/* Call to Action */}
       <div className="mt-12 text-center border-t border-gray-300 pt-8">
-        <h2 className="text-subheading md:text-[24px] font-poppins font-poppinsBold text-textDark">
-          Ready to Move?
-        </h2>
-        <p className="text-body sm:text-subheading md:text-[20px] font-poppins font-poppinsRegular text-textMedium mt-2">
-          Request a free quote today and let us handle your relocation with
-          care.
-        </p>
         <div className="flex justify-center mt-4">
           <InlineContactForm />
         </div>
@@ -223,7 +220,7 @@ export default function ContactPage() {
                 "@type": "ContactPoint",
                 telephone: "+91-123-456-7890",
                 contactType: "customer service",
-                email: "contact@keshavpackers.com",
+                email: "keshavpackerandmovers@gmail.com",
                 hoursAvailable: {
                   "@type": "OpeningHoursSpecification",
                   dayOfWeek: [

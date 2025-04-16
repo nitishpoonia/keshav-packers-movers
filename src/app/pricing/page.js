@@ -208,16 +208,8 @@ export default function PricingPage() {
 
       {/* Call to Action */}
       <div className="mt-12 text-center border-t border-gray-300 pt-8">
-        <h2 className="text-subheading md:text-[24px] font-poppins font-poppinsBold text-textDark">
-          Ready to Get a Personalized Quote?
-        </h2>
-        <p className="text-body sm:text-subheading md:text-[20px] font-poppins font-poppinsRegular text-textMedium mt-2">
-          Request a free quote today, or contact us for more details about your
-          move.
-        </p>
         <div className="flex justify-center mt-4 space-x-4">
           <InlineContactForm />
-
         </div>
       </div>
 

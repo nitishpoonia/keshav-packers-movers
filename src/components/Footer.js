@@ -665,10 +665,10 @@ export default function Footer() {
                 123 Moving Street, Bengaluru, India
               </li>
               <li className="text-[14px] sm:text-[16px] md:text-[18px] font-poppins font-poppinsRegular text-gray-300">
-                Phone: +91 123-456-7890
+                Phone: +91 7852000465, +91 7568428665
               </li>
               <li className="text-[14px] sm:text-[16px] md:text-[18px] font-poppins font-poppinsRegular text-gray-300">
-                Email: contact@keshavpackers.com
+                Email: keshavpackerandmovers@gmail.com
               </li>
             </ul>
           </div>

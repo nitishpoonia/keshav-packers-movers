@@ -112,10 +112,10 @@ export default function AboutPage() {
           </div>
           <div className="relative h-[300px] rounded-[12px] overflow-hidden">
             <Image
-              src="/assets/images/about-hero.jpg"
+              src="/assets/images/about-hero.svg"
               alt="Keshav Packers and Movers Team"
               fill
-              style={{ objectFit: "cover" }}
+              style={{ objectFit: "contain" }}
               className="rounded-[12px]"
             />
           </div>
@@ -196,7 +196,7 @@ export default function AboutPage() {
       </div>
 
       {/* Meet Our Team */}
-      <div className="mt-12">
+      {/* <div className="mt-12">
         <h2 className="text-subheading md:text-[24px] font-poppins font-poppinsBold text-textDark text-center mb-6">
           Meet Our Team
         </h2>
@@ -204,7 +204,7 @@ export default function AboutPage() {
           {teamData.map((member) => (
             <div
               key={member.name}
-              className="bg-white rounded-[12px] drop-shadow-[0_4px_8px_rgba(0,0,0,0.15)] p-4 text-center"
+              className="bg-white rounded-[12px] self-center drop-shadow-[0_4px_8px_rgba(0,0,0,0.15)] p-4 text-center"
             >
               <div className="relative w-32 h-32 mx-auto rounded-full overflow-hidden mb-4">
                 <Image
@@ -226,10 +226,10 @@ export default function AboutPage() {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
 
       {/* Certifications and Awards */}
-      <div className="mt-12">
+      {/* <div className="mt-12">
         <h2 className="text-subheading md:text-[24px] font-poppins font-poppinsBold text-textDark text-center mb-6">
           Certifications and Awards
         </h2>
@@ -255,17 +255,10 @@ export default function AboutPage() {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
 
       {/* Call to Action */}
       <div className="mt-12 text-center border-t border-gray-300 pt-8">
-        <h2 className="text-subheading md:text-[24px] font-poppins font-poppinsBold text-textDark">
-          Ready to Start Your Move?
-        </h2>
-        <p className="text-body sm:text-subheading md:text-[20px] font-poppins font-poppinsRegular text-textMedium mt-2">
-          Request a free quote today, or contact us to discuss your relocation
-          needs.
-        </p>
         <div className="flex justify-center mt-4 space-x-4">
           <InlineContactForm />
           

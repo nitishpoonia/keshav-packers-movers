@@ -3,12 +3,11 @@ import Image from "next/image";
 import Accordion from "../../components/Accordion";
 import InlineContactForm from "../../components/InlineContactForm";
 
-// Service data (same as in app/services/[slug]/page.js)
 const serviceData = [
   {
     title: "Home Relocation Services",
     tagline: "Hassle-Free Home Shifting with Expert Care",
-    image: "/assets/images/service/home-relocation-hero.jpg",
+    image: "/assets/images/service/home-relocation.jpeg",
     content: [
       {
         heading: "Why Choose Us for Home Relocation?",
@@ -41,7 +40,7 @@ const serviceData = [
   {
     title: "Bike/Car Relocation Services",
     tagline: "Safe and Secure Vehicle Transport Across India",
-    image: "/assets/images/service/bike-car-relocation-hero.jpg",
+    image: "/assets/images/service/bike-car-relocation.jpeg",
     content: [
       {
         heading: "Why Choose Us for Bike/Car Relocation?",
@@ -74,7 +73,7 @@ const serviceData = [
   {
     title: "Office Relocation Services",
     tagline: "Efficient Office Moves with Minimal Downtime",
-    image: "/assets/images/service/office-relocation-hero.jpg",
+    image: "/assets/images/service/office-relocation.jpeg",
     content: [
       {
         heading: "Why Choose Us for Office Relocation?",
@@ -107,7 +106,7 @@ const serviceData = [
   {
     title: "Storage Solutions",
     tagline: "Secure and Flexible Storage for Your Belongings",
-    image: "/assets/images/service/storage-solutions-hero.jpg",
+    image: "/assets/images/service/packing-unpacking.jpeg",
     content: [
       {
         heading: "Why Choose Our Storage Solutions?",
@@ -182,7 +181,7 @@ export default function ServicesPage() {
                 style={{ objectFit: "cover" }}
                 className="rounded-[12px] group-hover:scale-105 transition-transform duration-300"
               />
-              <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-end p-4 group-hover:bg-opacity-50 transition-all duration-300">
+              <div className="absolute inset-0  bg-opacity-40 flex flex-col justify-end p-4 group-hover:bg-opacity-50 transition-all duration-300">
                 <h3 className="text-[18px] md:text-[20px] font-poppins font-poppinsBold text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.2)]">
                   {service.title}
                 </h3>
@@ -285,7 +284,7 @@ export default function ServicesPage() {
               Our team of dedicated professionals is here to make your move as
               smooth as possible. With years of experience and a passion for
               customer service, we’re committed to delivering exceptional
-              results. [Add team photos or bios here in the future.]
+              results.
             </p>
             <div className="flex justify-center mt-4">
               <Link
@@ -301,13 +300,6 @@ export default function ServicesPage() {
 
       {/* Call to Action */}
       <div className="mt-12 text-center border-t border-gray-300 pt-8">
-        <h2 className="text-subheading md:text-[24px] font-poppins font-poppinsBold text-textDark">
-          Ready to Start Your Move?
-        </h2>
-        <p className="text-body sm:text-subheading md:text-[20px] font-poppins font-poppinsRegular text-textMedium mt-2">
-          Request a free quote today, or contact us to discuss your relocation
-          needs.
-        </p>
         <div className="flex justify-center mt-4 space-x-4">
           <InlineContactForm />
          
