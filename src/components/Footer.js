@@ -612,9 +612,13 @@ export default function Footer() {
           {/* Company Info */}
           <div>
             <Link href="/">
-              <h3 className="text-[22px] md:text-[26px] font-poppins font-poppinsBold">
-                Keshav Packers
-              </h3>
+              <Image
+                src="/assets/keshav-packers-logo-3.jpeg"
+                alt="logo"
+                width={200}
+                height={90}
+                className="mt-2"
+              />
             </Link>
             <p className="text-[14px] sm:text-[16px] md:text-[18px] font-poppins font-poppinsRegular text-gray-300 mt-2">
               Your trusted partner for seamless relocation across India. We move

@@ -6,7 +6,7 @@ import ServicesCTA from "./ServicesCTA";
 export default function Services() {
   const services = [
     {
-      image: "/assets/images/service/bike-car-relocation.jpeg",
+      icon: "/assets/icons/truck-icon.svg",
       title: "Bike/Car Relocation",
       description:
         "Ensure the safe and secure transport of your vehicles with our expert relocation services. We handle everything from bikes to cars, guaranteeing they arrive in perfect condition, no matter the distance.",
@@ -14,7 +14,7 @@ export default function Services() {
       link: "/services/bike-car-relocation",
     },
     {
-      image: "/assets/images/service/home-relocation.jpeg",
+      icon: "/assets/icons/home-icon.svg",
       title: "Home Relocation",
       description:
         "Experience hassle-free home shifting with our dedicated team. We provide careful handling of all your belongings, from furniture to fragile items, ensuring a smooth transition to your new home.",
@@ -22,7 +22,7 @@ export default function Services() {
       link: "/services/home-relocation",
     },
     {
-      image: "/assets/images/service/office-relocation.jpeg",
+      icon: "/assets/icons/office-icon.svg",
       title: "Office Relocation",
       description:
         "Relocate your business with minimal downtime. Our efficient moving services ensure a smooth transition for your office, handling equipment, furniture, and documents with care and precision.",
@@ -30,7 +30,7 @@ export default function Services() {
       link: "/services/office-relocation",
     },
     {
-      image: "/assets/images/service/packing-unpacking.jpeg", // New image path
+      icon: "/assets/icons/packing-icon.svg", // New image path
       title: "Packing and Unpacking Services",
       description:
         "Let our professionals handle the packing and unpacking of your belongings. We use high-quality materials to ensure your items are safe during transit, saving you time and effort.",
@@ -69,7 +69,7 @@ export default function Services() {
           {services.map((service, index) => (
             <ServiceCard
               key={index}
-              image={service.image}
+              icon={service.icon}
               title={service.title}
               description={service.description}
               ctaText={service.ctaText}

@@ -54,13 +54,16 @@ export default function Header() {
   ];
 
   return (
-    <header className="bg-[#333] text-white p-4 sticky top-0 z-50 shadow-md">
+    <header className="bg-[#333] text-white p-4 py-0 sticky top-0 z-50 shadow-md">
       <nav className="container mx-auto flex justify-between items-center">
-        {/* Left Side: Logo */}
         <Link href="/">
-          <h1 className="text-subheading font-poppins font-poppinsBold">
-            Keshav Packers
-          </h1>
+          <Image
+            src="/assets/keshav-packers-logo-3.jpeg"
+            alt="logo"
+            width={200}
+            height={90}
+            className="mt-2"
+          />
         </Link>
 
         {/* Center: Navigation Links (Desktop) */}
