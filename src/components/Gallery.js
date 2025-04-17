@@ -175,7 +175,7 @@ export default function Gallery({ rows }) {
                 className="bg-lightPeach border border-gray-200 shadow-md p-6 flex flex-col justify-between h-[300px] w-[280px] sm:w-[340px] flex-shrink-0"
               >
                 <div>
-                  <p className="text-[36px] font-bold text-textDark mb-2">"</p>
+                  <p className="text-[36px] font-bold text-textDark mb-2">&quot;</p>
                   <p className="text-[14px] sm:text-[16px] font-poppins font-poppinsRegular text-textMedium mb-4">
                     {testimonial.quote}
                   </p>
