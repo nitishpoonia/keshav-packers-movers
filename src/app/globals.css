@@ -142,3 +142,39 @@ nav button.hamburger-menu:hover span.hamburger-bar {
   max-height: 500px;
   opacity: 1;
 }
+
+.animate-gradient {
+  background: linear-gradient(to right, #FFC107, #FF5722);
+  background-size: 200% 200%;
+  animation: gradientShift 10s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Text Contrast Color for "India" Span */
+.text-contrast-blue {
+  color: #1E40AF; /* Tailwind's blue-800 */
+}
+
+.animate-wheels .wheel {
+  animation: rotateWheel 2s linear infinite;
+}
+
+@keyframes rotateWheel {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -4,6 +4,8 @@ import { LocationProvider } from "../context/LocationContext";
 import "./globals.css";
 import { ContactFormProvider } from "@/context/ContactFormContext";
 import ContactFormModalWrapper from "@/components/ContactFormModalWrapper";
+import FloatingButton from "@/components/FloatingButton";
+import FloatingWhatsAppButton from "@/components/FloatingWhatsAppButton";
 
 export const metadata = {
   title: "Keshav Packers and Movers",
@@ -18,6 +20,8 @@ export default function RootLayout({ children }) {
           <ContactFormProvider>
             <Header />
             {children}
+            <FloatingButton />
+            <FloatingWhatsAppButton />
             <Footer />
             <ContactFormModalWrapper />
           </ContactFormProvider>

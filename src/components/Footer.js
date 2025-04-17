@@ -656,10 +656,33 @@ export default function Footer() {
                   Contact
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/pricing"
+                  className="text-[14px] sm:text-[16px] md:text-[18px] font-poppins font-poppinsRegular text-gray-300 hover:text-primary"
+                >
+                  Pricing
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/about"
+                  className="text-[14px] sm:text-[16px] md:text-[18px] font-poppins font-poppinsRegular text-gray-300 hover:text-primary"
+                >
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/gallery"
+                  className="text-[14px] sm:text-[16px] md:text-[18px] font-poppins font-poppinsRegular text-gray-300 hover:text-primary"
+                >
+                  Gallery
+                </Link>
+              </li>
             </ul>
           </div>
 
-          {/* Contact Info */}
           <div>
             <h4 className="text-[22px] font-poppins font-poppinsBold text-primary">
               Contact Us

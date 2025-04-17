@@ -19,7 +19,6 @@ export default function Home() {
       <InlineContactForm />
       <FAQs />
       <ContactForm />
-      <FloatingButton />
     </div>
   );
 }

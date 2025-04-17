@@ -24,6 +24,7 @@ export default function Header() {
     { name: "Contact Us", href: "/contact" },
     { name: "Pricing", href: "/pricing" },
     { name: "FAQ", href: "/faq" },
+    { name: "Gallery", href: "/gallery" },
   ];
 
   // Services dropdown links
