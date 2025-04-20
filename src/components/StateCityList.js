@@ -1,65 +1,56 @@
-// src/components/StateCityList.js
 "use client";
 
-import Link from "next/link";
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
 
-export default function StateCityList({ statesAndCities }) {
-  // State to manage which states are expanded
-  const [expandedStates, setExpandedStates] = useState({});
+export default function StateCityList({
+  statesAndCities,
+  disableCityLinks = false,
+}) {
+  const [expandedState, setExpandedState] = useState(null);
 
-  // Toggle state expansion
   const toggleState = (state) => {
-    setExpandedStates((prev) => ({
-      ...prev,
-      [state]: !prev[state],
-    }));
+    setExpandedState(expandedState === state ? null : state);
   };
 
   return (
-    <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+    <div className="mt-6">
       {Object.keys(statesAndCities).map((state) => (
-        <div key={state} className="border border-gray-600 rounded-lg">
-          {/* State Header with Toggle */}
+        <div key={state} className="border-b border-gray-600">
           <button
             onClick={() => toggleState(state)}
-            className="w-full flex justify-between items-center p-3 bg-gray-700 rounded-t-lg hover:bg-gray-600 focus:outline-none"
-            aria-expanded={expandedStates[state] || false}
-            aria-controls={`cities-${state}`}
+            className="w-full text-left py-2 text-[16px] sm:text-[18px] font-poppins font-poppinsRegular text-primary hover:text-gray-300 focus:outline-none"
           >
-            <span className="text-[16px] md:text-[18px] font-poppins font-poppinsSemiBold text-primary">
-              {state}
-            </span>
-            <span className="text-gray-300">
-              {expandedStates[state] ? "−" : "+"}
+            {state}
+            <span className="float-right">
+              {expandedState === state ? "−" : "+"}
             </span>
           </button>
-          {/* Cities List (Expandable) */}
-          <AnimatePresence>
-            <motion.div
-              id={`cities-${state}`}
-              initial={{ height: "auto", opacity: 1 }} // Initially visible for SEO
-              animate={{
-                height: expandedStates[state] ? "auto" : 0,
-                opacity: expandedStates[state] ? 1 : 0,
-              }}
-              transition={{ duration: 0.3 }}
-              className="p-3 bg-gray-800 rounded-b-lg overflow-hidden"
-            >
-              <div className="grid grid-cols-2 gap-2">
-                {statesAndCities[state].map((cityName) => (
-                  <Link
-                    key={cityName}
-                    href={`/city/${cityName.toLowerCase()}`}
-                    className="text-[14px] md:text-[16px] font-poppins font-poppinsRegular text-gray-300 hover:text-primary"
+          {expandedState === state && (
+            <div className="py-2">
+              <ul className="flex flex-wrap gap-2">
+                {statesAndCities[state].map((city) => (
+                  <li
+                    key={city}
+                    className="text-[14px] sm:text-[16px] font-poppins font-poppinsRegular text-gray-300"
                   >
-                    {cityName}
-                  </Link>
+                    {disableCityLinks ? (
+                      <span>{city}</span>
+                    ) : (
+                      <Link
+                        href={`/services/${city
+                          .toLowerCase()
+                          .replace(/\s+/g, "-")}`}
+                        className="hover:text-primary"
+                      >
+                        {city}
+                      </Link>
+                    )}
+                  </li>
                 ))}
-              </div>
-            </motion.div>
-          </AnimatePresence>
+              </ul>
+            </div>
+          )}
         </div>
       ))}
     </div>

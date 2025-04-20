@@ -499,7 +499,7 @@ const indianStatesAndCities = {
     "Viper Island",
   ],
   Chandigarh: ["Chandigarh"],
-  "Dadra and Nagar Haveli and Daman and Diu": [
+  "Daman and Diu": [
     "Daman",
     "Diu",
     "Silvassa",

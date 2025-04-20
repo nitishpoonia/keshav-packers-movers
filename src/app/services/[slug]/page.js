@@ -1,4 +1,3 @@
-// app/services/[slug]/page.js
 import Image from "next/image";
 import InlineContactForm from "@/components/InlineContactForm";
 import Link from "next/link";
@@ -37,7 +36,7 @@ const serviceData = {
   "bike-car-relocation": {
     title: "Bike/Car Relocation Services",
     tagline: "Safe and Secure Vehicle Transport Across India",
-    image: "/assets/images/service/bike-car-relocation-hero.jpg",
+    image: "/assets/images/gallery/move-76.jpeg",
     content: [
       {
         heading: "Why Choose Us for Bike/Car Relocation?",
@@ -66,7 +65,7 @@ const serviceData = {
   "office-relocation": {
     title: "Office Relocation Services",
     tagline: "Efficient Office Moves with Minimal Downtime",
-    image: "/assets/images/service/office-relocation-hero.jpg",
+    image: "/assets/images/gallery/move-76.jpeg",
     content: [
       {
         heading: "Why Choose Us for Office Relocation?",
@@ -90,6 +89,35 @@ const serviceData = {
         "Efficient office relocation services with minimal downtime by Keshav Packers and Movers. Move your business seamlessly across India with expert care.",
       keywords:
         "office relocation, business moving, packers and movers, office shifting services, efficient office relocation India",
+    },
+  },
+  "packing-unpacking": {
+    title: "Packing and Unpacking Services",
+    tagline: "Professional Packing for a Stress-Free Move",
+    image: "/assets/images/service/packing-unpacking-hero.jpg",
+    content: [
+      {
+        heading: "Why Choose Our Packing and Unpacking Services?",
+        description:
+          "Let our professionals take the stress out of moving with expert packing and unpacking services. We use high-quality materials to ensure your belongings are safe during transit, handling everything from fragile items to heavy furniture.",
+      },
+      {
+        heading: "Our Packing and Unpacking Process",
+        description:
+          "We begin with a free quote and a packing plan tailored to your needs. Our team carefully packs your items using the best materials, transports them securely, and unpacks everything at your new location, saving you time and effort.",
+      },
+      {
+        heading: "Benefits of Our Service",
+        description:
+          "Our packing and unpacking services are affordable, efficient, and designed to make your move seamless. We offer flexible scheduling, careful handling, and optional insurance for added peace of mind, ensuring your belongings are protected every step of the way.",
+      },
+    ],
+    meta: {
+      title: "Packing and Unpacking Services | Keshav Packers and Movers",
+      description:
+        "Professional packing and unpacking services by Keshav Packers and Movers. Ensure a stress-free move with expert care and high-quality materials across India.",
+      keywords:
+        "packing services, unpacking services, packers and movers, professional packing, stress-free moving India",
     },
   },
   "storage-solutions": {
@@ -119,6 +147,35 @@ const serviceData = {
         "Secure and flexible storage solutions with Keshav Packers and Movers. Store your belongings safely with climate-controlled options across India.",
       keywords:
         "storage solutions, secure storage, packers and movers, climate-controlled storage, storage services India",
+    },
+  },
+  "international-relocation": {
+    title: "International Relocation Services",
+    tagline: "Seamless Moves Across Borders",
+    image: "/assets/images/service/international-relocation-hero.jpg",
+    content: [
+      {
+        heading: "Why Choose Us for International Relocation?",
+        description:
+          "Moving abroad? We specialize in international relocation, ensuring your belongings reach your new home safely. Our team handles customs clearance, documentation, and secure transport with expertise and care.",
+      },
+      {
+        heading: "Our International Relocation Process",
+        description:
+          "We start with a free quote and a detailed plan for your international move. Our team packs your items securely, manages all customs and documentation requirements, and ensures safe delivery to your destination, keeping you informed at every step.",
+      },
+      {
+        heading: "Benefits of Our Service",
+        description:
+          "Our international relocation services offer competitive pricing, expert customs handling, and reliable transport. We provide insurance options, real-time tracking, and dedicated support to make your global move smooth and stress-free.",
+      },
+    ],
+    meta: {
+      title: "International Relocation Services | Keshav Packers and Movers",
+      description:
+        "Seamless international relocation services with Keshav Packers and Movers. Move across borders with expert customs handling and secure transport.",
+      keywords:
+        "international relocation, global moving, packers and movers, customs clearance, international moving services India",
     },
   },
 };
@@ -173,7 +230,7 @@ export default function ServicePage({ params }) {
             style={{ objectFit: "cover" }}
             className="rounded-[12px]"
           />
-          <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center text-center p-4">
+          <div className="absolute inset-0 bg-primary bg-opacity-20 flex flex-col justify-center items-center text-center p-4 h-full">
             <h1 className="text-heading sm:text-[40px] md:text-[48px] lg:text-[56px] font-poppins font-poppinsBold text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.2)]">
               {service.title}
             </h1>
