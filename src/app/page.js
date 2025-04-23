@@ -7,6 +7,7 @@ import OurProcessWrapper from "@/components/OurProcessWrapper";
 import EstimatedMovingCostsWrapper from "@/components/EstimatedMovingCostsWrapper";
 import InlineContactForm from "@/components/InlineContactForm";
 import FAQs from "@/components/FAQs";
+import RecentBlogPosts from "@/components/RecentBlogPosts";
 // src/app/page.js
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       <InlineContactForm />
       <FAQs />
       <ContactForm />
+      <RecentBlogPosts />
     </div>
   );
 }
