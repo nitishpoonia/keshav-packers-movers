@@ -689,7 +689,8 @@ export default function Footer() {
             </h4>
             <ul className="mt-2 space-y-2">
               <li className="text-[14px] sm:text-[16px] md:text-[18px] font-poppins font-poppinsRegular text-gray-300">
-                123 Moving Street, Bengaluru, India
+                Shop No. 1, Girdhar Vihar, Dhawas, Near Government School, Ajmer
+                Road, Jaipur, Rajasthan - 302021
               </li>
               <li className="text-[14px] sm:text-[16px] md:text-[18px] font-poppins font-poppinsRegular text-gray-300">
                 Phone: +91 7852000465, +91 7568428665

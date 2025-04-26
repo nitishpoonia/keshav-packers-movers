@@ -9,7 +9,7 @@ const contactFAQs = [
   {
     question: "How quickly will I get a response?",
     answer:
-      "We aim to respond to all inquiries within 24 hours. For urgent requests, please call us at +91 123-456-7890, and we’ll assist you immediately.",
+      "We aim to respond to all inquiries within 24 hours. For urgent requests, please call us at +91 7852000465, and we’ll assist you immediately.",
   },
   {
     question: "Can I visit your office?",
@@ -94,7 +94,8 @@ export default function ContactPage() {
                 Address
               </h3>
               <p className="text-[14px] md:text-[16px] font-poppins font-poppinsRegular text-textMedium">
-                123 Moving Street, Bengaluru, India
+                Shop No. 1, Girdhar Vihar, Dhawas, Near Government School, Ajmer
+                Road, Jaipur, Rajasthan - 302021
               </p>
             </div>
             <div>
@@ -152,7 +153,7 @@ export default function ContactPage() {
         </h2>
         <div className="w-full h-[400px] rounded-lg overflow-hidden">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.007167217381!2d77.594566314822!3d12.971598990865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8517e4f!2sBengaluru%2C%20Karnataka%2C%20India!5e0!3m2!1sen!2sus!4v169876543210!5m2!1sen!2sus"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.614661162847!2d75.72320871504253!3d26.90431798312987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zShop+No.+1%2C+Girdhar+Vihar%2C+Dhawas%2C+Near+Government+School%2C+Ajmer+Road%2C+Jaipur%2C+Rajasthan+-+302021%2C+India!5e0!3m2!1sen!2sus!4v169876543210!5m2!1sen!2sus"
             width="100%"
             height="100%"
             style={{ border: 0 }}
