@@ -1,6 +1,5 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import { LocationProvider } from "../context/LocationContext";
 import "./globals.css";
 import { ContactFormProvider } from "@/context/ContactFormContext";
 import ContactFormModalWrapper from "@/components/ContactFormModalWrapper";
@@ -16,16 +15,14 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <LocationProvider>
-          <ContactFormProvider>
-            <Header />
-            {children}
-            <FloatingButton />
-            <FloatingWhatsAppButton />
-            <Footer />
-            <ContactFormModalWrapper />
-          </ContactFormProvider>
-        </LocationProvider>
+        <ContactFormProvider>
+          <Header />
+          {children}
+          <FloatingButton />
+          <FloatingWhatsAppButton />
+          <Footer />
+          <ContactFormModalWrapper />
+        </ContactFormProvider>
       </body>
     </html>
   );

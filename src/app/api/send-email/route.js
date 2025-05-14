@@ -9,7 +9,6 @@ const transporter = nodemailer.createTransport({
     pass: process.env.EMAIL_PASS, // Your Gmail App Password (not your regular password)
   },
 });
-console.log(process.env.EMAIL_PASS);
 
 // POST handler for the API route
 export async function POST(request) {
@@ -32,9 +31,9 @@ export async function POST(request) {
     const mailOptions = {
       from: process.env.EMAIL_USER, // Sender address
       to: process.env.RECEIVER_EMAIL, // Receiver address (your email)
-      subject: subject || "New Contact Form Submission",
+      subject: subject || "New Query For Moving Services",
       html: `
-        <h2>New Contact Form Submission</h2>
+        <h2>New Query For Moving Services</h2>
         <p><strong>Name:</strong> ${name || "Not provided"}</p>
         <p><strong>Email:</strong> ${email || "Not provided"}</p>
         <p><strong>Phone:</strong> ${phone || "Not provided"}</p>

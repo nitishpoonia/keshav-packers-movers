@@ -9,12 +9,12 @@ const contactFAQs = [
   {
     question: "How quickly will I get a response?",
     answer:
-      "We aim to respond to all inquiries within 24 hours. For urgent requests, please call us at +91 7852000465, and we’ll assist you immediately.",
+      "We aim to respond to all inquiries within 24 hours. For urgent requests, please call us at +91 7852000465, and we'll assist you immediately.",
   },
   {
     question: "Can I visit your office?",
     answer:
-      "Yes, you’re welcome to visit our office at 123 Moving Street, Bengaluru, India. We’re open Monday to Sunday from 9:00 AM to 6:00 PM. Please schedule an appointment for a smoother experience.",
+      "Yes, you're welcome to visit our office at Shop No. 10, Shri Kishore Tower, Bajari Mandi Road, Sawranpuri, Kanakpura, Jaipur, 302034. We're open Monday to Sunday from 9:00 AM to 6:00 PM. Please schedule an appointment for a smoother experience.",
   },
   {
     question: "What services can I inquire about?",
@@ -69,7 +69,7 @@ export default function ContactPage() {
       </h1>
       <p className="text-body sm:text-subheading md:text-[20px] font-poppins font-poppinsRegular text-textMedium text-center mt-4 max-w-3xl mx-auto">
         Get in touch with Keshav Packers and Movers for all your relocation
-        needs across India. We’re here to help you every step of the way.
+        needs across India. We&apos;re here to help you every step of the way.
       </p>
 
       {/* Contact Form and Details Section */}
@@ -94,8 +94,8 @@ export default function ContactPage() {
                 Address
               </h3>
               <p className="text-[14px] md:text-[16px] font-poppins font-poppinsRegular text-textMedium">
-                Shop No. 1, Girdhar Vihar, Dhawas, Near Government School, Ajmer
-                Road, Jaipur, Rajasthan - 302021
+                Shop No. 10, Shri Kishore Tower, Bajari Mandi Road, Sawranpuri,
+                Kanakpura, Jaipur, 302034
               </p>
             </div>
             <div>
@@ -153,7 +153,7 @@ export default function ContactPage() {
         </h2>
         <div className="w-full h-[400px] rounded-lg overflow-hidden">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.614661162847!2d75.72320871504253!3d26.90431798312987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zShop+No.+1%2C+Girdhar+Vihar%2C+Dhawas%2C+Near+Government+School%2C+Ajmer+Road%2C+Jaipur%2C+Rajasthan+-+302021%2C+India!5e0!3m2!1sen!2sus!4v169876543210!5m2!1sen!2sus"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.614661162847!2d75.72320871504253!3d26.90431798312987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zShop+No.+10%2C+Shri+Kishore+Tower%2C+Bajari+Mandi+Road%2C+Sawranpuri%2C+Kanakpura%2C+Jaipur%2C+302034!5e0!3m2!1sen!2sus!4v169876543210!5m2!1sen!2sus"
             width="100%"
             height="100%"
             style={{ border: 0 }}
@@ -174,7 +174,7 @@ export default function ContactPage() {
             Monday - Sunday: 9:00 AM - 6:00 PM
           </p>
           <p className="text-[14px] md:text-[16px] font-poppins font-poppinsRegular text-textMedium mt-2">
-            We’re available to assist you during these hours. For emergencies,
+            We&apos;re available to assist you during these hours. For emergencies,
             please call us directly.
           </p>
         </div>
@@ -210,16 +210,17 @@ export default function ContactPage() {
             url: "https://yourwebsite.com",
             address: {
               "@type": "PostalAddress",
-              streetAddress: "123 Moving Street",
-              addressLocality: "Bengaluru",
-              addressRegion: "Karnataka",
-              postalCode: "560001",
+              streetAddress:
+                "Shop No. 10, Shri Kishore Tower, Bajari Mandi Road, Sawranpuri, Kanakpura",
+              addressLocality: "Jaipur",
+              addressRegion: "Rajasthan",
+              postalCode: "302034",
               addressCountry: "IN",
             },
             contactPoint: [
               {
                 "@type": "ContactPoint",
-                telephone: "+91-123-456-7890",
+                telephone: "+91-7852000465",
                 contactType: "customer service",
                 email: "keshavpackerandmovers@gmail.com",
                 hoursAvailable: {

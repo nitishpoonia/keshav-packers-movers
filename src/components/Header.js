@@ -6,11 +6,9 @@ import { useState } from "react";
 import { usePathname } from "next/navigation";
 import Button from "./Button";
 import useHeaderLogic from "../hooks/useHeaderLogic";
-import { useLocation } from "../context/LocationContext";
 import { useContactForm } from "@/context/ContactFormContext";
 
 export default function Header() {
-  const { city } = useLocation();
   const { isModalOpen, toggleModal } = useHeaderLogic();
   const { openForm } = useContactForm();
   const pathname = usePathname();
@@ -113,24 +111,10 @@ export default function Header() {
           ))}
         </div>
 
-        {/* Right Side: Button, City with Icon, Hamburger Menu */}
         <div className="flex items-center space-x-2 sm:space-x-3">
           {/* Get a Quote Button (Hidden on Mobile) */}
           <div className="hidden md:block">
             <Button onClick={openForm} title="Get a Quote" />
-          </div>
-
-          {/* City with Location Pin Icon (Hidden on Mobile) */}
-          <div className="hidden md:flex items-center space-x-1">
-            <Image
-              src="/assets/icons/location-pin.svg"
-              alt="Location Pin"
-              width={24}
-              height={24}
-            />
-            <span className="font-poppins font-poppinsSemiBold text-body">
-              {city}
-            </span>
           </div>
 
           {/* Hamburger Menu (Visible on Mobile) */}
@@ -210,19 +194,6 @@ export default function Header() {
                 </div>
               ))}
             </nav>
-
-            {/* City Display */}
-            <div className="mt-6 flex items-center space-x-1">
-              <Image
-                src="/assets/icons/location-pin.svg"
-                alt="Location Pin"
-                width={16}
-                height={16}
-              />
-              <span className="font-poppins font-poppinsRegular text-body text-textDark">
-                {city}
-              </span>
-            </div>
 
             {/* Get a Quote Button */}
             <div className="mt-4">

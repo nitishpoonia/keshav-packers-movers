@@ -1,12 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 
-export default function StateCityList({
-  statesAndCities,
-  disableCityLinks = false,
-}) {
+export default function StateCityList({ statesAndCities }) {
   const [expandedState, setExpandedState] = useState(null);
 
   const toggleState = (state) => {
@@ -34,18 +30,7 @@ export default function StateCityList({
                     key={city}
                     className="text-[14px] sm:text-[16px] font-poppins font-poppinsRegular text-gray-300"
                   >
-                    {disableCityLinks ? (
-                      <span>{city}</span>
-                    ) : (
-                      <Link
-                        href={`/services/${city
-                          .toLowerCase()
-                          .replace(/\s+/g, "-")}`}
-                        className="hover:text-primary"
-                      >
-                        {city}
-                      </Link>
-                    )}
+                    {city}
                   </li>
                 ))}
               </ul>
