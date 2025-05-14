@@ -71,15 +71,8 @@ export default function ContactFormModal() {
           </svg>
         </button>
 
-        <div className="text-center mb-6">
-          <Image
-            src="/assets/images/logo.png"
-            alt="Keshav Packers and Movers Logo"
-            width={64}
-            height={64}
-            className="mx-auto mb-4"
-          />
-          <h2 className="text-subheading font-poppins font-poppinsBold text-textDark mb-4">
+        <div className="mb-6">
+          <h2 className="text-subheading text-center text-2xl font-poppins font-poppinsBold text-textDark mb-4">
             Get a Free Quote
           </h2>
           <form onSubmit={handleSubmit} className="space-y-4">
