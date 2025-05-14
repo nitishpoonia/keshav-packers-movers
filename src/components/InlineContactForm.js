@@ -190,7 +190,7 @@ export default function InlineContactForm() {
         {/* Status Messages */}
         {submissionStatus === "success" && (
           <p className="text-green-600 text-[14px] font-poppins font-poppinsRegular">
-            Thank you! We'll contact you shortly.
+            Thank you! We&apos;ll contact you shortly.
           </p>
         )}
         {submissionStatus === "error" && (
