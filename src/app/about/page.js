@@ -94,20 +94,21 @@ export default function AboutPage() {
               Our Story
             </h2>
             <p className="text-[14px] sm:text-[16px] font-poppins font-poppinsRegular text-textMedium mb-4">
-              Founded over 10 years ago, Keshav Packers and Movers started with
-              a simple mission: to make relocation stress-free for families and
-              businesses across India. What began as a small team in Bengaluru
-              has grown into a nationwide operation, serving over 10,000
-              customers in more than 100 cities. Our commitment to reliability,
-              transparency, and care has earned us the trust of thousands,
-              making us a leader in the relocation industry.
+              At Keshav Packers and Movers, we understand that moving can be
+              stressful—but it doesn&apos;t have to be. Based in the heart of Jaipur,
+              we offer fast, secure, and reliable packing and moving services
+              designed to make your relocation experience smooth from start to
+              finish. Whether you&apos;re shifting your home, office, or vehicle, our
+              expert team ensures everything reaches its destination safely and
+              on time.
             </p>
             <p className="text-[14px] sm:text-[16px] font-poppins font-poppinsRegular text-textMedium">
-              From local moves to long-distance relocations, we’ve handled it
-              all—helping families settle into new homes, businesses transition
-              to new offices, and individuals transport their vehicles safely.
-              At Keshav Packers and Movers, we believe every move is a new
-              beginning, and we’re here to make it a smooth one.
+              With years of hands-on experience and a strong local presence,
+              Keshav Packers and Movers has built a reputation for trust and
+              efficiency in Jaipur and surrounding areas. From careful packing
+              to timely delivery, we handle every step with professionalism and
+              care—so you can focus on settling into your new space, while we
+              take care of the rest.
             </p>
           </div>
           <div className="relative h-[300px] rounded-[12px] overflow-hidden">
@@ -261,7 +262,6 @@ export default function AboutPage() {
       <div className="mt-12 text-center border-t border-gray-300 pt-8">
         <div className="flex justify-center mt-4 space-x-4">
           <InlineContactForm />
-          
         </div>
       </div>
 

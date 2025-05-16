@@ -9,6 +9,9 @@ import FloatingWhatsAppButton from "@/components/FloatingWhatsAppButton";
 export const metadata = {
   title: "Keshav Packers and Movers",
   description: "Reliable packers and movers in India.",
+  icons: {
+    icon: "/public/favicon.ico",
+  },
 };
 
 export default function RootLayout({ children }) {

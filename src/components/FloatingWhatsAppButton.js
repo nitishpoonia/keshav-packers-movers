@@ -26,7 +26,7 @@ export default function FloatingWhatsAppButton() {
       animate="animate"
     >
       <Link
-        href="https://wa.me/+917568428665?text=Hello,%20I’d%20like%20to%20inquire%20about%20your%20moving%20services!"
+        href="https://wa.me/+917852000465?text=Hello,%20I’d%20like%20to%20inquire%20about%20your%20moving%20services!"
         target="_blank"
         rel="noopener noreferrer"
         className="
