@@ -70,7 +70,7 @@ export default async function BlogPost({ params }) {
                 Blog Post Not Found
               </h2>
               <p className="text-body sm:text-subheading md:text-[20px] font-poppins font-poppinsRegular text-textMedium mt-4">
-                The blog post you're looking for doesn't exist. Please check our{" "}
+                The blog post you&apos;re looking for doesn&apos;t exist. Please check our{" "}
                 <Link href="/blog" className="text-primary underline">
                   Blog
                 </Link>{" "}

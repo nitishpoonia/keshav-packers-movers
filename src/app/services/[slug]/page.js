@@ -259,7 +259,7 @@ export default function ServicePage({ params }) {
                 Service Not Found
               </h2>
               <p className="text-body sm:text-subheading md:text-[20px] font-poppins font-poppinsRegular text-textMedium mt-4">
-                The service you're looking for doesn't exist. Please check our{" "}
+                The service you&apos;re looking for doesn&apos;t exist. Please check our{" "}
                 <Link href="/services" className="text-primary underline">
                   Services
                 </Link>
