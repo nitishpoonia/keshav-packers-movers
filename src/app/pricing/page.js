@@ -119,7 +119,7 @@ export async function generateMetadata() {
       description:
         "Explore pricing for home relocation, bike/car relocation, and office moves with Keshav Packers and Movers.",
       type: "website",
-      url: "https://yourwebsite.com/pricing",
+      url: "https://keshavpackersmovers.com/pricing",
     },
   };
 }
@@ -221,13 +221,13 @@ export default function PricingPage() {
             "@context": "https://schema.org",
             "@type": "Organization",
             name: "Keshav Packers and Movers",
-            url: "https://yourwebsite.com",
+            url: "https://keshavpackersmovers.com",
             contactPoint: [
               {
                 "@type": "ContactPoint",
-                telephone: "+91-123-456-7890",
+                telephone: "+917852000465",
                 contactType: "customer service",
-                email: "contact@keshavpackers.com",
+                email: "keshavpackersandmovers@gmail.com",
               },
             ],
           }),

@@ -55,7 +55,7 @@ export async function generateMetadata() {
       description:
         "Get in touch with Keshav Packers and Movers for reliable relocation services across India.",
       type: "website",
-      url: "https://yourwebsite.com/contact",
+      url: "https://keshavpackersmovers.com/contact",
     },
   };
 }
@@ -174,8 +174,8 @@ export default function ContactPage() {
             Monday - Sunday: 9:00 AM - 6:00 PM
           </p>
           <p className="text-[14px] md:text-[16px] font-poppins font-poppinsRegular text-textMedium mt-2">
-            We&apos;re available to assist you during these hours. For emergencies,
-            please call us directly.
+            We&apos;re available to assist you during these hours. For
+            emergencies, please call us directly.
           </p>
         </div>
       </div>
@@ -207,7 +207,7 @@ export default function ContactPage() {
             "@context": "https://schema.org",
             "@type": "Organization",
             name: "Keshav Packers and Movers",
-            url: "https://yourwebsite.com",
+            url: "https://keshavpackersmovers.com",
             address: {
               "@type": "PostalAddress",
               streetAddress:

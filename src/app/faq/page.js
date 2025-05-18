@@ -42,7 +42,7 @@ const faqData = [
   {
     question: "Do you offer storage solutions?",
     answer:
-      "Yes, we provide secure, climate-controlled storage solutions for both short-term and long-term needs. Whether you’re moving or need extra space, our storage facilities are equipped with advanced security systems to keep your items safe.",
+      "Yes, we provide secure, climate-controlled storage solutions for both short-term and long-term needs. Whether you're moving or need extra space, our storage facilities are equipped with advanced security systems to keep your items safe.",
   },
   {
     question: "How do I book a move with Keshav Packers?",
@@ -69,7 +69,7 @@ export async function generateMetadata() {
       description:
         "Find answers to common questions about packing and moving services with Keshav Packers and Movers.",
       type: "website",
-      url: "https://yourwebsite.com/faq",
+      url: "https://keshavpackersmovers.com/faq",
     },
   };
 }
@@ -104,7 +104,6 @@ export default function FAQPage() {
         </p>
         <div className="flex justify-center mt-4 space-x-4">
           <InlineContactForm />
-         
         </div>
       </div>
 

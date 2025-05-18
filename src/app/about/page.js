@@ -68,7 +68,7 @@ export async function generateMetadata() {
       description:
         "Learn more about Keshav Packers and Movers, a trusted relocation service provider.",
       type: "website",
-      url: "https://yourwebsite.com/about",
+      url: "https://keshavpackersmovers.com/about",
     },
   };
 }
@@ -95,12 +95,12 @@ export default function AboutPage() {
             </h2>
             <p className="text-[14px] sm:text-[16px] font-poppins font-poppinsRegular text-textMedium mb-4">
               At Keshav Packers and Movers, we understand that moving can be
-              stressful—but it doesn&apos;t have to be. Based in the heart of Jaipur,
-              we offer fast, secure, and reliable packing and moving services
-              designed to make your relocation experience smooth from start to
-              finish. Whether you&apos;re shifting your home, office, or vehicle, our
-              expert team ensures everything reaches its destination safely and
-              on time.
+              stressful—but it doesn&apos;t have to be. Based in the heart of
+              Jaipur, we offer fast, secure, and reliable packing and moving
+              services designed to make your relocation experience smooth from
+              start to finish. Whether you&apos;re shifting your home, office,
+              or vehicle, our expert team ensures everything reaches its
+              destination safely and on time.
             </p>
             <p className="text-[14px] sm:text-[16px] font-poppins font-poppinsRegular text-textMedium">
               With years of hands-on experience and a strong local presence,
@@ -173,8 +173,8 @@ export default function AboutPage() {
               Customer Care
             </h3>
             <p className="text-[14px] sm:text-[16px] font-poppins font-poppinsRegular text-textMedium mt-2">
-              Your satisfaction is our priority—we’re with you every step of the
-              way.
+              Your satisfaction is our priority—we&apos;re with you every step
+              of the way.
             </p>
           </div>
           <div className="text-center">

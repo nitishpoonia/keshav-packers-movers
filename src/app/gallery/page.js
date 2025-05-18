@@ -121,7 +121,7 @@ const galleryImages = [
   },
   {
     src: "/assets/images/gallery/move-31.jpeg",
-    alt: "Family unpacking toys in a child’s room",
+    alt: "Family unpacking toys in a child's room",
   },
   {
     src: "/assets/images/gallery/move-32.jpeg",
@@ -229,7 +229,7 @@ const galleryImages = [
   },
   {
     src: "/assets/images/gallery/move-58.jpeg",
-    alt: "Packing children’s toys into boxes",
+    alt: "Packing children's toys into boxes",
   },
   {
     src: "/assets/images/gallery/move-59.jpeg",
@@ -311,6 +311,75 @@ const galleryImages = [
     src: "/assets/images/gallery/move-78.jpeg",
     alt: "Car arriving at its new destination",
   },
+  {
+    src: "/assets/images/gallery/move-79.jpeg",
+    alt: "Movers carefully handling antique furniture",
+  },
+  {
+    src: "/assets/images/gallery/move-80.jpeg",
+    alt: "Team organizing boxes in a storage facility",
+  },
+  {
+    src: "/assets/images/gallery/move-81.jpeg",
+    alt: "Packing delicate glass items with bubble wrap",
+  },
+  {
+    src: "/assets/images/gallery/move-82.jpeg",
+    alt: "Moving truck parked at a commercial building",
+  },
+  {
+    src: "/assets/images/gallery/move-83.jpeg",
+    alt: "Family setting up their new living room",
+  },
+  {
+    src: "/assets/images/gallery/move-84.jpeg",
+    alt: "Movers loading a grandfather clock",
+  },
+  {
+    src: "/assets/images/gallery/move-85.jpeg",
+    alt: "Office team moving server equipment",
+  },
+  {
+    src: "/assets/images/gallery/move-86.jpeg",
+    alt: "Unloading a piano at a new residence",
+  },
+  {
+    src: "/assets/images/gallery/move-87.jpeg",
+    alt: "Bike being prepared for long-distance transport",
+  },
+  {
+    src: "/assets/images/gallery/move-88.jpeg",
+    alt: "Packing artwork with custom wooden crates",
+  },
+  {
+    src: "/assets/images/gallery/move-89.jpeg",
+    alt: "Moving truck navigating through city traffic",
+  },
+  {
+    src: "/assets/images/gallery/move-90.jpeg",
+    alt: "Team assembling a modular kitchen",
+  },
+  {
+    src: "/assets/images/gallery/move-91.jpeg",
+    alt: "Family organizing their new study room",
+  },
+  {
+    src: "/assets/images/gallery/move-92.jpeg",
+    alt: "Movers loading garden furniture",
+  },
+  {
+    src: "/assets/images/gallery/move-93.jpeg",
+    alt: "Packing electronics with anti-static materials",
+  },
+];
+
+// Video data
+const galleryVideos = [
+  {
+    src: "https://youtu.be/ve4nc-X6JdM?si=G8jeb23IrkwKEP-O",
+    alt: "Keshav Packers and Movers - Our Moving Services",
+    thumbnail: "/assets/images/gallery/video-thumbnail.jpg", // You'll need to add this thumbnail image
+  },
 ];
 
 // Group images into rows (2 columns on mobile, 4 columns on desktop)
@@ -338,7 +407,7 @@ export async function generateMetadata() {
       description:
         "Explore our gallery to see how Keshav Packers and Movers ensures seamless relocations across India.",
       type: "website",
-      url: "https://yourwebsite.com/gallery",
+      url: "https://keshavpackersmovers.com/gallery",
     },
   };
 }
@@ -355,6 +424,29 @@ export default function GalleryPage() {
           Explore our gallery to see how Keshav Packers and Movers ensures
           seamless relocations across India with professional moving services.
         </p>
+      </section>
+
+      {/* Video Section */}
+      <section className="mb-16">
+        <h2 className="text-2xl md:text-3xl font-poppins font-poppinsBold text-textDark mb-8 text-center">
+          Our Moving Services in Action
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {galleryVideos.map((video, index) => (
+            <div
+              key={index}
+              className="relative aspect-video rounded-lg overflow-hidden shadow-lg"
+            >
+              <iframe
+                src={video.src.replace("youtu.be", "www.youtube.com/embed")}
+                title={video.alt}
+                className="absolute top-0 left-0 w-full h-full"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
+          ))}
+        </div>
       </section>
 
       {/* Gallery Section */}

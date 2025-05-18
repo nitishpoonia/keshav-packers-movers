@@ -22,7 +22,7 @@ const serviceData = {
       {
         heading: "Benefits of Our Service",
         description:
-          "Enjoy affordable pricing, transparent quotes, and exceptional customer support. We offer insurance options for added peace of mind and flexible scheduling to fit your timeline. Whether you’re moving locally or long-distance, we’ve got you covered with professional home relocation services.",
+          "Enjoy affordable pricing, transparent quotes, and exceptional customer support. We offer insurance options for added peace of mind and flexible scheduling to fit your timeline. Whether you're moving locally or long-distance, we've got you covered with professional home relocation services.",
       },
     ],
     meta: {
@@ -133,7 +133,7 @@ const serviceData = {
       {
         heading: "Our Storage Process",
         description:
-          "Request a storage quote, and we’ll help you choose the right plan. We pack and transport your items to our facility, store them securely, and deliver them back when you’re ready. It’s that simple!",
+          "Request a storage quote, and we'll help you choose the right plan. We pack and transport your items to our facility, store them securely, and deliver them back when you're ready. It's that simple!",
       },
       {
         heading: "Benefits of Our Service",
@@ -201,7 +201,7 @@ export async function generateMetadata({ params }) {
       title: service.meta.title,
       description: service.meta.description,
       type: "website",
-      url: `https://yourwebsite.com/services/${slug}`,
+      url: `https://keshavpackersmovers.com/services/${slug}`,
       images: [service.image],
     },
   };
@@ -259,7 +259,7 @@ export default function ServicePage({ params }) {
                 Service Not Found
               </h2>
               <p className="text-body sm:text-subheading md:text-[20px] font-poppins font-poppinsRegular text-textMedium mt-4">
-                The service you’re looking for doesn’t exist. Please check our{" "}
+                The service you're looking for doesn't exist. Please check our{" "}
                 <Link href="/services" className="text-primary underline">
                   Services
                 </Link>

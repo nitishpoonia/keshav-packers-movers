@@ -151,7 +151,7 @@ export async function generateMetadata() {
       description:
         "Discover our range of moving services with Keshav Packers and Movers across India.",
       type: "website",
-      url: "https://yourwebsite.com/services",
+      url: "https://keshavpackersmovers.com/services",
     },
   };
 }
@@ -302,7 +302,6 @@ export default function ServicesPage() {
       <div className="mt-12 text-center border-t border-gray-300 pt-8">
         <div className="flex justify-center mt-4 space-x-4">
           <InlineContactForm />
-         
         </div>
       </div>
 
@@ -314,7 +313,7 @@ export default function ServicesPage() {
             "@context": "https://schema.org",
             "@type": "Organization",
             name: "Keshav Packers and Movers",
-            url: "https://yourwebsite.com",
+            url: "https://keshavpackersmovers.com",
             description:
               "Keshav Packers and Movers offers a range of relocation services, including home relocation, bike/car relocation, office moves, and storage solutions across India.",
             contactPoint: [
