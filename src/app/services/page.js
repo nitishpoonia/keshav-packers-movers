@@ -98,7 +98,7 @@ const serviceData = [
       {
         heading: "Customer Testimonial",
         description:
-          "Keshav Packers and Movers relocated our office in Bengaluru with zero downtime. Their team was professional and efficient, and we were back to work the next day! – Anil K., CEO",
+          "Keshav Packers and Movers relocated our office in Jaipur with zero downtime. Their team was professional and efficient, and we were back to work the next day! – Anil K., CEO",
       },
     ],
     slug: "office-relocation",

@@ -1,4 +1,3 @@
-import Link from "next/link";
 import FAQItem from "../../components/FAQItem";
 import InlineContactForm from "../../components/InlineContactForm";
 
@@ -30,11 +29,6 @@ const faqData = [
       "Yes, we offer insurance options to protect your belongings during transit. Our team ensures careful handling, but in the rare event of damage or loss, our insurance coverage provides peace of mind. Contact us to learn more about our insurance plans and coverage details.",
   },
   {
-    question: "Can I track my move in real-time?",
-    answer:
-      "Yes, we provide real-time tracking for your move. Once your move is scheduled, you’ll receive a tracking ID that you can use on our website to monitor the status of your shipment. Stay updated on your move’s progress from pickup to delivery.",
-  },
-  {
     question: "What packing materials do you use?",
     answer:
       "We use high-quality packing materials, including bubble wrap, corrugated boxes, packing tape, and protective padding, to ensure the safety of your belongings. For fragile items, we use specialized packing techniques to minimize the risk of damage during transit.",
@@ -52,7 +46,7 @@ const faqData = [
   {
     question: "What areas do you serve?",
     answer:
-      "We provide moving services across all major cities in India, including Delhi, Mumbai, Bengaluru, Hyderabad, Chennai, and more. Check our footer for a full list of cities we serve, or contact us to confirm availability in your area.",
+      "We provide moving services across all major cities in India, including, Jaipur, Delhi, Mumbai, Bengaluru, Hyderabad, Chennai, and more. Check our footer for a full list of cities we serve, or contact us to confirm availability in your area.",
   },
 ];
 

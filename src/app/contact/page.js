@@ -27,13 +27,8 @@ const contactFAQs = [
 const socialMediaLinks = [
   {
     name: "Facebook",
-    href: "https://facebook.com",
+    href: "https://www.facebook.com/people/Keshavpackerandmovers-Jaipur/pfbid0QfuJaK4RXra3Nzy1ftF8yGRNRAMBVNau4nBXuZMkgBtVo2LyAfJ913QkyotE4hL5l/?mibextid=rS40aB7S9Ucbxw6v",
     icon: "/assets/icons/facebook-icon.svg",
-  },
-  {
-    name: "Twitter",
-    href: "https://twitter.com",
-    icon: "/assets/icons/twitter-icon.svg",
   },
   {
     name: "Instagram",
@@ -47,9 +42,9 @@ export async function generateMetadata() {
   return {
     title: "Contact Us | Keshav Packers and Movers",
     description:
-      "Get in touch with Keshav Packers and Movers for reliable relocation services across India. Call us, email us, or visit our office in Bengaluru.",
+      "Get in touch with Keshav Packers and Movers for reliable relocation services across India. Call us, email us, or visit our office in Jaipur.",
     keywords:
-      "contact packers and movers Bengaluru, packers and movers India contact, relocation services contact",
+      "contact packers and movers Jaipur, packers and movers India contact, relocation services contact",
     openGraph: {
       title: "Contact Us | Keshav Packers and Movers",
       description:
