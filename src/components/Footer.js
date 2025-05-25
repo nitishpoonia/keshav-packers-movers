@@ -708,7 +708,7 @@ export default function Footer() {
             </h4>
             <div className="flex space-x-4 mt-2">
               <Link
-                href="https://facebook.com"
+                href="https://www.facebook.com/people/Keshavpackerandmovers-Jaipur/pfbid0QfuJaK4RXra3Nzy1ftF8yGRNRAMBVNau4nBXuZMkgBtVo2LyAfJ913QkyotE4hL5l/?mibextid=rS40aB7S9Ucbxw6v"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -720,19 +720,7 @@ export default function Footer() {
                   className="hover:opacity-80"
                 />
               </Link>
-              <Link
-                href="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Image
-                  src="/assets/icons/twitter-icon.svg"
-                  alt="Twitter"
-                  width={24}
-                  height={24}
-                  className="hover:opacity-80"
-                />
-              </Link>
+
               <Link
                 href="https://instagram.com"
                 target="_blank"

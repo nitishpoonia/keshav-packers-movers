@@ -37,13 +37,8 @@ export default function Header() {
   const socialMediaLinks = [
     {
       name: "Facebook",
-      href: "https://facebook.com",
+      href: "https://www.facebook.com/people/Keshavpackerandmovers-Jaipur/pfbid0QfuJaK4RXra3Nzy1ftF8yGRNRAMBVNau4nBXuZMkgBtVo2LyAfJ913QkyotE4hL5l/?mibextid=rS40aB7S9Ucbxw6v",
       icon: "/assets/icons/facebook-icon.svg",
-    },
-    {
-      name: "Twitter",
-      href: "https://twitter.com",
-      icon: "/assets/icons/twitter-icon.svg",
     },
     {
       name: "Instagram",
