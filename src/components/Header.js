@@ -37,12 +37,12 @@ export default function Header() {
   const socialMediaLinks = [
     {
       name: "Facebook",
-      href: "https://www.facebook.com/people/Keshavpackerandmovers-Jaipur/pfbid0QfuJaK4RXra3Nzy1ftF8yGRNRAMBVNau4nBXuZMkgBtVo2LyAfJ913QkyotE4hL5l/?mibextid=rS40aB7S9Ucbxw6v",
+      href: "https://www.facebook.com/profile.php?id=61576871482831",
       icon: "/assets/icons/facebook-icon.svg",
     },
     {
       name: "Instagram",
-      href: "https://instagram.com",
+      href: "https://www.instagram.com/keshavpackerandmovers/",
       icon: "/assets/icons/instagram-icon.svg",
     },
   ];
@@ -52,11 +52,10 @@ export default function Header() {
       <nav className="container mx-auto flex justify-between items-center">
         <Link href="/">
           <Image
-            src="/assets/keshav-packers-logo-3.jpeg"
-            alt="logo"
-            width={200}
-            height={90}
-            className="mt-2"
+            src="/assets/keshav-packers-logo-3.svg"
+            alt="Keshav Packers and Movers - Professional Moving Services Logo"
+            width={70}
+            height={20}
           />
         </Link>
 
@@ -145,7 +144,7 @@ export default function Header() {
               >
                 <Image
                   src="/assets/icons/cross.svg"
-                  alt="Close Menu"
+                  alt="Close navigation menu icon"
                   width={24}
                   height={24}
                 />
@@ -217,7 +216,7 @@ export default function Header() {
                   >
                     <Image
                       src={link.icon}
-                      alt={link.name}
+                      alt={`${link.name} social media icon for Keshav Packers and Movers`}
                       width={24}
                       height={24}
                       className="hover:opacity-80"

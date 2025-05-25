@@ -127,7 +127,7 @@ export default function FloatingButton() {
       >
         <Image
           src="/assets/icons/phone-icon.svg"
-          alt="Call Us"
+          alt="Phone icon - Call Keshav Packers and Movers for moving services"
           width={34}
           height={34}
           className="text-white"

@@ -15,7 +15,7 @@ export default function ServiceCard({
         <div className="relative w-16 h-16 rounded-full bg-gradient-to-r from-primary to-secondary p-3">
           <Image
             src={icon}
-            alt={`${title} Icon`}
+            alt={`${title} service icon for Keshav Packers and Movers`}
             fill
             style={{ objectFit: "contain" }}
             className="p-1.5"

@@ -7,12 +7,15 @@ export const metadata = {
     "Explore helpful moving tips and guides on the Keshav Packers and Movers blog. Learn how to make your relocation smooth and stress-free with expert advice.",
   keywords:
     "packers and movers blog, moving tips, relocation guides, home moving advice",
+  alternates: {
+    canonical: "https://keshavpackersmovers.com/blog",
+  },
   openGraph: {
     title: "Blog | Keshav Packers and Movers",
     description:
       "Explore helpful moving tips and guides on the Keshav Packers and Movers blog.",
     type: "website",
-    url: "https://yourwebsite.com/blog",
+    url: "https://keshavpackersmovers.com/blog",
   },
 };
 

@@ -58,6 +58,9 @@ export async function generateMetadata() {
       "Find answers to common questions about packing and moving services with Keshav Packers and Movers. Learn about pricing, preparation, and more.",
     keywords:
       "packers and movers FAQs, moving tips India, relocation questions, Keshav Packers FAQ",
+    alternates: {
+      canonical: "https://keshavpackersmovers.com/faq",
+    },
     openGraph: {
       title: "Frequently Asked Questions | Keshav Packers and Movers",
       description:

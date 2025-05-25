@@ -27,12 +27,12 @@ const contactFAQs = [
 const socialMediaLinks = [
   {
     name: "Facebook",
-    href: "https://www.facebook.com/people/Keshavpackerandmovers-Jaipur/pfbid0QfuJaK4RXra3Nzy1ftF8yGRNRAMBVNau4nBXuZMkgBtVo2LyAfJ913QkyotE4hL5l/?mibextid=rS40aB7S9Ucbxw6v",
+    href: "https://www.facebook.com/profile.php?id=61576871482831",
     icon: "/assets/icons/facebook-icon.svg",
   },
   {
     name: "Instagram",
-    href: "https://instagram.com",
+    href: "https://www.instagram.com/keshavpackerandmovers/",
     icon: "/assets/icons/instagram-icon.svg",
   },
 ];
@@ -45,6 +45,9 @@ export async function generateMetadata() {
       "Get in touch with Keshav Packers and Movers for reliable relocation services across India. Call us, email us, or visit our office in Jaipur.",
     keywords:
       "contact packers and movers Jaipur, packers and movers India contact, relocation services contact",
+    alternates: {
+      canonical: "https://keshavpackersmovers.com/contact",
+    },
     openGraph: {
       title: "Contact Us | Keshav Packers and Movers",
       description:
@@ -128,7 +131,7 @@ export default function ContactPage() {
                   >
                     <Image
                       src={link.icon}
-                      alt={link.name}
+                      alt={`${link.name} social media icon - Connect with Keshav Packers and Movers`}
                       width={24}
                       height={24}
                       className="hover:opacity-80"

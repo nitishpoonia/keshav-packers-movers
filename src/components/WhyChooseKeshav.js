@@ -45,7 +45,7 @@ export default function WhyChooseKeshav() {
         <Image
           className=""
           src="/assets/images/why-choose/wave-pattern2.svg"
-          alt="Wave Pattern"
+          alt="Decorative wave pattern background for Why Choose Keshav Packers section"
           fill
           style={{ objectFit: "cover", objectPosition: "bottom" }}
         />
@@ -75,7 +75,7 @@ export default function WhyChooseKeshav() {
               <div className="w-[34px] h-[34px] mr-4">
                 <Image
                   src={card.icon}
-                  alt={`${card.title} Icon`}
+                  alt={`${card.title} feature icon for Keshav Packers and Movers`}
                   width={34}
                   height={34}
                 />

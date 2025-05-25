@@ -31,7 +31,7 @@ export default function FAQItem({ question, answer }) {
         >
           <Image
             src="/assets/icons/arrow-down.svg"
-            alt="Toggle Answer"
+            alt="Expand/collapse arrow icon for FAQ answer"
             width={20}
             height={20}
           />

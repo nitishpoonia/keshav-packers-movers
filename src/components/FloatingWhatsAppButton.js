@@ -57,7 +57,7 @@ export default function FloatingWhatsAppButton() {
       >
         <Image
           src="/assets/icons/whatsapp-icon.svg"
-          alt="Chat on WhatsApp"
+          alt="WhatsApp icon - Chat with Keshav Packers and Movers for moving services"
           width={32}
           height={32}
           className="sm:w-10 sm:h-10"

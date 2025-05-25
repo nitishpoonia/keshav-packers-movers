@@ -146,6 +146,9 @@ export async function generateMetadata() {
       "Discover our range of moving services, including home relocation, bike/car relocation, office moves, and storage solutions with Keshav Packers and Movers across India.",
     keywords:
       "packers and movers services, home relocation India, bike car relocation, office moving, storage solutions India",
+    alternates: {
+      canonical: "https://keshavpackersmovers.com/services",
+    },
     openGraph: {
       title: "Our Moving Services | Keshav Packers and Movers",
       description:
@@ -176,7 +179,7 @@ export default function ServicesPage() {
             <div className="relative h-[200px] rounded-[12px] overflow-hidden group">
               <Image
                 src={service.image}
-                alt={service.title}
+                alt={`${service.title} - Professional moving service offered by Keshav Packers and Movers`}
                 fill
                 style={{ objectFit: "cover" }}
                 className="rounded-[12px] group-hover:scale-105 transition-transform duration-300"

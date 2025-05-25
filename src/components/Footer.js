@@ -607,14 +607,24 @@ export default function Footer() {
   return (
     <footer className="bg-[#333] text-white py-8">
       <div className="container mx-auto px-4">
+        <div className="mt-2 mb-10">
+          <h2 className="text-[22px] sm:text-[26px] md:text-[30px] font-poppins font-poppinsBold text-primary text-center">
+            Packers and Movers Across India
+          </h2>
+          <p className="text-[14px] sm:text-[16px] md:text-[18px] font-poppins font-poppinsRegular text-gray-300 text-center mt-2 max-w-3xl mx-auto">
+            We provide moving services across all Indian states and Union
+            Territories. Expand a state to see our top cities.
+          </p>
+          <StateCityList statesAndCities={indianStatesAndCities} />
+        </div>
         {/* Top Section: 4-column layout on desktop, 2-column on mobile */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
             <Link href="/">
               <Image
-                src="/assets/keshav-packers-logo-3.jpeg"
-                alt="logo"
+                src="/assets/keshav-packers-logo-3.svg"
+                alt="Keshav Packers and Movers company logo - Professional moving services"
                 width={200}
                 height={90}
                 className="mt-2"
@@ -708,13 +718,13 @@ export default function Footer() {
             </h4>
             <div className="flex space-x-4 mt-2">
               <Link
-                href="https://www.facebook.com/people/Keshavpackerandmovers-Jaipur/pfbid0QfuJaK4RXra3Nzy1ftF8yGRNRAMBVNau4nBXuZMkgBtVo2LyAfJ913QkyotE4hL5l/?mibextid=rS40aB7S9Ucbxw6v"
+                href="https://www.facebook.com/profile.php?id=61576871482831"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <Image
                   src="/assets/icons/facebook-icon.svg"
-                  alt="Facebook"
+                  alt="Facebook social media icon - Follow Keshav Packers and Movers"
                   width={24}
                   height={24}
                   className="hover:opacity-80"
@@ -722,13 +732,13 @@ export default function Footer() {
               </Link>
 
               <Link
-                href="https://instagram.com"
+                href="https://www.instagram.com/keshavpackerandmovers/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <Image
                   src="/assets/icons/instagram-icon.svg"
-                  alt="Instagram"
+                  alt="Instagram social media icon - Follow Keshav Packers and Movers"
                   width={24}
                   height={24}
                   className="hover:opacity-80"
@@ -747,16 +757,6 @@ export default function Footer() {
         </div>
 
         {/* SEO Visibility Section: States and Cities */}
-        <div className="mt-8 border-t border-gray-600 pt-8">
-          <h2 className="text-[22px] sm:text-[26px] md:text-[30px] font-poppins font-poppinsBold text-primary text-center">
-            Packers and Movers Across India
-          </h2>
-          <p className="text-[14px] sm:text-[16px] md:text-[18px] font-poppins font-poppinsRegular text-gray-300 text-center mt-2 max-w-3xl mx-auto">
-            We provide moving services across all Indian states and Union
-            Territories. Expand a state to see our top cities.
-          </p>
-          <StateCityList statesAndCities={indianStatesAndCities} />
-        </div>
       </div>
     </footer>
   );

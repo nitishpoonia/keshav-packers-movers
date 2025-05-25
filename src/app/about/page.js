@@ -63,6 +63,9 @@ export async function generateMetadata() {
       "Learn more about Keshav Packers and Movers, a trusted relocation service provider with over 10 years of experience across India.",
     keywords:
       "about Keshav Packers, packers and movers India, trusted relocation services, moving company about",
+    alternates: {
+      canonical: "https://keshavpackersmovers.com/about",
+    },
     openGraph: {
       title: "About Keshav Packers and Movers | Trusted Relocation Services",
       description:
@@ -114,7 +117,7 @@ export default function AboutPage() {
           <div className="relative h-[300px] rounded-[12px] overflow-hidden">
             <Image
               src="/assets/images/about-hero.svg"
-              alt="Keshav Packers and Movers Team"
+              alt="Professional team of Keshav Packers and Movers providing reliable moving services across India"
               fill
               style={{ objectFit: "contain" }}
               className="rounded-[12px]"
@@ -132,7 +135,7 @@ export default function AboutPage() {
           <div className="text-center">
             <Image
               src="/assets/icons/reliability-icon.svg"
-              alt="Reliability Icon"
+              alt="Reliability icon representing trustworthy moving services by Keshav Packers and Movers"
               width={48}
               height={48}
               className="mx-auto mb-4"
@@ -148,7 +151,7 @@ export default function AboutPage() {
           <div className="text-center">
             <Image
               src="/assets/icons/transparency-icon.svg"
-              alt="Transparency Icon"
+              alt="Transparency icon representing clear pricing and honest moving services by Keshav Packers and Movers"
               width={48}
               height={48}
               className="mx-auto mb-4"
@@ -164,7 +167,7 @@ export default function AboutPage() {
           <div className="text-center">
             <Image
               src="/assets/icons/customer-care-icon.svg"
-              alt="Customer Care Icon"
+              alt="Customer care icon representing dedicated support and service by Keshav Packers and Movers"
               width={48}
               height={48}
               className="mx-auto mb-4"
@@ -180,7 +183,7 @@ export default function AboutPage() {
           <div className="text-center">
             <Image
               src="/assets/icons/safety-icon.svg"
-              alt="Safety Icon"
+              alt="Safety icon representing secure handling and protection of belongings by Keshav Packers and Movers"
               width={48}
               height={48}
               className="mx-auto mb-4"

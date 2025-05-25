@@ -24,7 +24,7 @@ export default function Accordion({ title, prices, content }) {
         >
           <Image
             src="/assets/icons/arrow-down.svg"
-            alt="Arrow Down"
+            alt="Expand/collapse arrow icon for service details"
             width={20}
             height={20}
           />

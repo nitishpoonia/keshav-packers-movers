@@ -21,7 +21,7 @@ export default function FormSuccess({
         <div className="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center">
           <Image
             src="/assets/icons/check.svg"
-            alt="Success"
+            alt="Success checkmark icon - Form submitted successfully to Keshav Packers and Movers"
             width={32}
             height={32}
             className="text-green-500"

@@ -7,10 +7,14 @@ import FloatingButton from "@/components/FloatingButton";
 import FloatingWhatsAppButton from "@/components/FloatingWhatsAppButton";
 
 export const metadata = {
-  title: "Keshav Packers and Movers",
-  description: "Reliable packers and movers in India.",
+  title: "Reliable Packers and Movers Services – Keshav Packers and Movers",
+  description:
+    "Keshav Packers and Movers ensures smooth home and office relocation with expert packing, secure transport, and timely delivery across major cities in India.",
   icons: {
     icon: "/public/favicon.ico",
+  },
+  alternates: {
+    canonical: "https://keshavpackersmovers.com",
   },
 };
 

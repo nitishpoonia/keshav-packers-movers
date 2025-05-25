@@ -89,7 +89,7 @@ export default function Hero() {
       >
         <Image
           src="/assets/illustrations/truck-custom.svg"
-          alt="Moving Truck"
+          alt="Professional moving truck illustration for Keshav Packers and Movers relocation services"
           width={400}
           height={200}
           className="animate-wheels"
@@ -197,7 +197,7 @@ export default function Hero() {
           <span>Get A Free Quote Now</span>
           <Image
             src="/assets/icons/right-arrow.svg"
-            alt="Right Arrow"
+            alt="Right arrow icon for Get Free Quote button"
             width={24}
             height={24}
           />

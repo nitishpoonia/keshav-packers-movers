@@ -197,6 +197,9 @@ export async function generateMetadata({ params }) {
       service.meta.title || "Service Not Found | Keshav Packers and Movers",
     description: service.meta.description || "Service not found.",
     keywords: service.meta.keywords || "",
+    alternates: {
+      canonical: `https://keshavpackersmovers.com/services/${slug}`,
+    },
     openGraph: {
       title: service.meta.title,
       description: service.meta.description,
@@ -225,7 +228,7 @@ export default function ServicePage({ params }) {
         <div className="relative h-[300px] rounded-[12px] overflow-hidden mb-8">
           <Image
             src={service.image}
-            alt={service.title}
+            alt={`${service.title} - Professional moving service hero image by Keshav Packers and Movers`}
             fill
             style={{ objectFit: "cover" }}
             className="rounded-[12px]"
@@ -259,7 +262,8 @@ export default function ServicePage({ params }) {
                 Service Not Found
               </h2>
               <p className="text-body sm:text-subheading md:text-[20px] font-poppins font-poppinsRegular text-textMedium mt-4">
-                The service you&apos;re looking for doesn&apos;t exist. Please check our{" "}
+                The service you&apos;re looking for doesn&apos;t exist. Please
+                check our{" "}
                 <Link href="/services" className="text-primary underline">
                   Services
                 </Link>

@@ -61,7 +61,7 @@ export default function Services() {
         <Image
           className="w-full h-[250px]"
           src="/assets/images/service/service-wave-pattern.svg"
-          alt="Wave Pattern"
+          alt="Decorative wave pattern background for Keshav Packers and Movers services section"
           fill
           style={{ objectFit: "cover", objectPosition: "top" }}
         />

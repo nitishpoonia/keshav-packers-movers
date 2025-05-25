@@ -4,32 +4,35 @@ import Gallery from "../../components/Gallery";
 const galleryImages = [
   {
     src: "/assets/images/gallery/move-1.jpeg",
-    alt: "Moving truck loaded with boxes",
+    alt: "Keshav Packers and Movers truck loaded with boxes for home relocation",
   },
-  { src: "/assets/images/gallery/move-2.jpeg", alt: "Team packing furniture" },
+  {
+    src: "/assets/images/gallery/move-2.jpeg",
+    alt: "Keshav Packers and Movers team packing furniture with care",
+  },
   {
     src: "/assets/images/gallery/move-3.jpeg",
-    alt: "Family unpacking in new home",
+    alt: "Family unpacking in new home with Keshav Packers and Movers assistance",
   },
   {
     src: "/assets/images/gallery/move-4.jpeg",
-    alt: "Bike being loaded for transport",
+    alt: "Bike being loaded for transport by Keshav Packers and Movers",
   },
   {
     src: "/assets/images/gallery/move-5.jpeg",
-    alt: "Office relocation in progress",
+    alt: "Office relocation in progress by Keshav Packers and Movers team",
   },
   {
     src: "/assets/images/gallery/move-6.jpeg",
-    alt: "Packing fragile items with care",
+    alt: "Keshav Packers and Movers team packing fragile items with care",
   },
   {
     src: "/assets/images/gallery/move-7.jpeg",
-    alt: "Moving truck on the road",
+    alt: "Keshav Packers and Movers truck on the road for relocation service",
   },
   {
     src: "/assets/images/gallery/move-8.jpeg",
-    alt: "Team unloading at destination",
+    alt: "Keshav Packers and Movers team unloading at destination",
   },
   {
     src: "/assets/images/gallery/move-9.jpeg",
@@ -377,7 +380,7 @@ const galleryImages = [
 const galleryVideos = [
   {
     src: "https://youtu.be/ve4nc-X6JdM?si=G8jeb23IrkwKEP-O",
-    alt: "Keshav Packers and Movers - Our Moving Services",
+    alt: "Keshav Packers and Movers - Professional Moving Services Video Showcase",
     thumbnail: "/assets/images/gallery/video-thumbnail.jpg", // You'll need to add this thumbnail image
   },
 ];
@@ -402,6 +405,9 @@ export async function generateMetadata() {
       "Explore our gallery to see how Keshav Packers and Movers ensures seamless relocations across India with professional moving services.",
     keywords:
       "packers and movers gallery, moving services photos, relocation images India",
+    alternates: {
+      canonical: "https://keshavpackersmovers.com/gallery",
+    },
     openGraph: {
       title: "Gallery | Keshav Packers and Movers",
       description:

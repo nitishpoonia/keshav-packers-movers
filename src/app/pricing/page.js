@@ -114,6 +114,9 @@ export async function generateMetadata() {
       "Explore pricing for home relocation, bike/car relocation, and office moves with Keshav Packers and Movers. Get a free quote for your move across India.",
     keywords:
       "packers and movers pricing India, moving cost calculator, affordable movers cost, Keshav Packers pricing",
+    alternates: {
+      canonical: "https://keshavpackersmovers.com/pricing",
+    },
     openGraph: {
       title: "Pricing for Moving Services | Keshav Packers and Movers",
       description:

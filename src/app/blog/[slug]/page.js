@@ -19,6 +19,9 @@ export async function generateMetadata({ params }) {
     title: post.meta.title || "Blog Post Not Found | Keshav Packers and Movers",
     description: post.meta.description || "Blog post not found.",
     keywords: post.meta.keywords || "",
+    alternates: {
+      canonical: `https://keshavpackersmovers.com/blog/${slug}`,
+    },
     openGraph: {
       title: post.meta.title,
       description: post.meta.description,

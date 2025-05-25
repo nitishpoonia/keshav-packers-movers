@@ -83,7 +83,7 @@ export default function AnimatedTimeline({ steps, scrollYProgress }) {
             >
               <Image
                 src={step.icon}
-                alt={`${step.title} Icon`}
+                alt={`${step.title} process icon for Keshav Packers and Movers moving timeline`}
                 width={38}
                 height={38}
               />
