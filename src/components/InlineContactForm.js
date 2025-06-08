@@ -17,6 +17,13 @@ export default function InlineContactForm() {
   const [errorMessage, setErrorMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
+  // Generate a unique request number
+  const generateRequestNumber = () => {
+    const timestamp = Date.now();
+    const random = Math.floor(Math.random() * 1000);
+    return `REQ-${timestamp}-${random}`;
+  };
+
   // Dropdown options (easily editable)
   const movingTimeOptions = [
     "Within 1 Week",
@@ -44,7 +51,30 @@ export default function InlineContactForm() {
     setSubmissionStatus(null);
 
     try {
-      // Add your form submission logic here
+      const requestNumber = generateRequestNumber();
+
+      const response = await fetch("/api/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          // Send inline form data (using different field names)
+          fromCity: formData.from,
+          toCity: formData.to,
+          phone: formData.phone,
+          movingTime: formData.movingTime,
+          serviceType: formData.service,
+          subject: `Free Quote Request #${requestNumber}`,
+          requestNumber: requestNumber,
+        }),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.error || "Failed to send request");
+      }
+
       setSubmissionStatus("success");
       setFormData({
         from: "",
@@ -54,12 +84,50 @@ export default function InlineContactForm() {
         service: "",
       });
     } catch (error) {
+      console.error("Form submission error:", error);
       setSubmissionStatus("error");
-      setErrorMessage("Failed to submit form. Please try again.");
+      setErrorMessage(
+        error.message || "Failed to submit form. Please try again."
+      );
     } finally {
       setIsLoading(false);
     }
   };
+
+  if (submissionStatus === "success") {
+    return (
+      <div className="w-full max-w-4xl mx-auto text-center">
+        <div className="bg-green-50 border border-green-200 rounded-lg p-6 mb-4">
+          <svg
+            className="w-12 h-12 text-green-500 mx-auto mb-4"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M5 13l4 4L19 7"
+            />
+          </svg>
+          <h3 className="text-2xl font-poppins font-poppinsBold text-green-800 mb-2">
+            Quote Request Submitted!
+          </h3>
+          <p className="text-lg font-poppins font-poppinsRegular text-green-700 mb-4">
+            Thank you for your interest in our moving services. Our team will
+            contact you within 24 hours with a detailed quote.
+          </p>
+          <button
+            onClick={() => setSubmissionStatus(null)}
+            className="bg-primary text-white py-2 px-6 rounded-lg font-poppins font-poppinsSemiBold hover:bg-primary/90 transition-colors"
+          >
+            Submit Another Request
+          </button>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="w-full max-w-4xl mx-auto">
@@ -185,21 +253,46 @@ export default function InlineContactForm() {
         <button
           type="submit"
           disabled={isLoading}
-          className="w-full bg-primary text-white py-3 rounded-lg font-poppins font-poppinsSemiBold hover:bg-primary/90 transition-colors disabled:opacity-50 text-[18px]"
+          className={`w-full bg-primary text-white py-3 rounded-lg font-poppins font-poppinsSemiBold hover:bg-primary/90 transition-colors disabled:opacity-50 text-[18px] flex justify-center items-center ${
+            isLoading ? "cursor-not-allowed" : ""
+          }`}
         >
-          {isLoading ? "Submitting..." : "Get Free Quote"}
+          {isLoading ? (
+            <>
+              <svg
+                className="animate-spin h-5 w-5 mr-2 text-white"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <circle
+                  className="opacity-25"
+                  cx="12"
+                  cy="12"
+                  r="10"
+                  stroke="currentColor"
+                  strokeWidth="4"
+                ></circle>
+                <path
+                  className="opacity-75"
+                  fill="currentColor"
+                  d="M4 12a8 8 0 018-8v8H4z"
+                ></path>
+              </svg>
+              Submitting...
+            </>
+          ) : (
+            "Get Free Quote"
+          )}
         </button>
 
-        {/* Status Messages */}
-        {submissionStatus === "success" && (
-          <p className="text-green-600 text-[14px] font-poppins font-poppinsRegular">
-            Thank you! We&apos;ll contact you shortly.
-          </p>
-        )}
+        {/* Error Message */}
         {submissionStatus === "error" && (
-          <p className="text-red-600 text-[14px] font-poppins font-poppinsRegular">
-            {errorMessage}
-          </p>
+          <div className="bg-red-50 border border-red-200 rounded-lg p-3">
+            <p className="text-red-600 text-[14px] font-poppins font-poppinsRegular">
+              {errorMessage}
+            </p>
+          </div>
         )}
       </form>
     </div>
