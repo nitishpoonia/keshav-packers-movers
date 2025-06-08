@@ -15,7 +15,7 @@ export default function Accordion({ title, prices, content }) {
         onClick={() => setIsOpen(!isOpen)}
         className="w-full p-4 flex justify-between items-center focus:outline-none"
       >
-        <h3 className="text-subheading text-left md:text-[22px] font-poppins font-poppinsSemiBold text-textDark">
+        <h3 className="text-[20px] text-left md:text-[22px] font-poppins font-poppinsSemiBold text-textDark">
           {title}
         </h3>
         <motion.div

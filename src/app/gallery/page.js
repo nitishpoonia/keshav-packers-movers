@@ -423,10 +423,10 @@ export default function GalleryPage() {
     <div className="container mx-auto px-4 py-12">
       {/* Header Section */}
       <section className="text-center mb-12">
-        <h1 className="text-heading sm:text-[40px] md:text-[48px] lg:text-[56px] font-poppins font-poppinsBold text-textDark">
+        <h1 className="text-[36px] sm:text-[40px] md:text-[48px] lg:text-[56px] font-poppins font-poppinsBold text-textDark">
           Gallery
         </h1>
-        <p className="text-body sm:text-subheading md:text-[20px] font-poppins font-poppinsRegular text-textMedium mt-4 max-w-3xl mx-auto">
+        <p className="text-[20px] sm:text-subheading md:text-[20px] font-poppins font-poppinsRegular text-textMedium mt-4 max-w-3xl mx-auto">
           Explore our gallery to see how Keshav Packers and Movers ensures
           seamless relocations across India with professional moving services.
         </p>

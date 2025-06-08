@@ -58,7 +58,7 @@ const truckVariants = {
         repeat: Infinity,
       },
       scale: {
-        times: [0, 0.2, 0.6, 0.8, 1], // Scale up when centered, down when moving
+        times: [ 1], // Scale up when centered, down when moving
         duration: 7.5,
         ease: "easeInOut",
         repeat: Infinity,
@@ -76,13 +76,13 @@ export default function Hero() {
   });
 
   return (
-    <section className="relative min-h-[500px] sm:min-h-[600px] md:min-h-[700px] flex flex-col justify-center items-center overflow-hidden py-4 md:mt-0 md:mb-0">
+    <section className="relative min-h-[600px] sm:min-h-[600px] md:min-h-[700px] flex flex-col justify-center items-center overflow-hidden pb-4 md:mt-0 md:mb-0">
       {/* Animated Gradient Background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary animate-gradient"></div>
+      <div className="absolute inset-0 pb-10 bg-gradient-to-r from-primary to-secondary animate-gradient"></div>
 
       {/* Animated Truck SVG */}
       <motion.div
-        className="absolute bottom-0 left-0 right-0 flex justify-center z-0"
+        className="absolute bottom-4 left-0 right-0 flex justify-center z-0"
         initial="initial"
         animate="animate"
         variants={truckVariants}
@@ -129,7 +129,7 @@ export default function Hero() {
         {/* Statistics */}
         <motion.div
           ref={statsRef}
-          className="flex flex-col md:flex-row gap-6 sm:gap-8 md:gap-12 mt-4"
+          className="flex flex-row md:flex-row gap-6 sm:gap-8 md:gap-12 mt-4 mb-3"
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
@@ -140,7 +140,7 @@ export default function Hero() {
               className="flex flex-col items-center"
               variants={statVariants}
             >
-              <p className="text-4xl sm:text-5xl md:text-6xl font-poppins font-poppinsBold drop-shadow-[0_4px_6px_rgba(0,0,0,0.5)]">
+              <p className="text-3xl sm:text-5xl md:text-6xl font-poppins font-poppinsBold drop-shadow-[0_4px_6px_rgba(0,0,0,0.5)]">
                 {isInView ? (
                   <CountUp
                     start={0}
@@ -168,6 +168,7 @@ export default function Hero() {
             px-6 py-3 sm:px-8 sm:py-4 rounded-lg 
             shadow-[0_4px_6px_rgba(0,0,0,0.1)] 
             hover:shadow-[0_4px_6px_rgba(0,0,0,0.15)]
+            mb-24 md:mb-12
           "
           onClick={openForm}
           variants={itemVariants}

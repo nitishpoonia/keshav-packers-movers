@@ -129,12 +129,12 @@ export async function generateMetadata() {
 
 export default function PricingPage() {
   return (
-    <div className="container mx-auto px-4 py-12">
+    <div className="container mx-auto px-4 py-12 pt-6">
       {/* Header Section */}
-      <h1 className="text-heading sm:text-[40px] md:text-[48px] lg:text-[56px] font-poppins font-poppinsBold text-textDark text-center">
+      <h1 className="text-[36px] sm:text-[40px] md:text-[48px] lg:text-[56px] font-poppins font-poppinsBold text-textDark text-center">
         Pricing for Moving Services
       </h1>
-      <p className="text-body sm:text-subheading md:text-[20px] font-poppins font-poppinsRegular text-textMedium text-center mt-4 max-w-3xl mx-auto">
+      <p className="text-[20px] sm:text-subheading md:text-[20px] font-poppins font-poppinsRegular text-textMedium text-center mt-4 max-w-3xl mx-auto">
         We offer transparent pricing for all your relocation needs across India.
         Explore our estimated costs, calculate your move, and request a free
         quote for a personalized estimate.
@@ -142,7 +142,7 @@ export default function PricingPage() {
 
       {/* Estimated Moving Costs */}
       <div className="mt-12">
-        <h2 className="text-subheading md:text-[24px] font-poppins font-poppinsBold text-textDark text-center mb-6">
+        <h2 className="text-[26px] md:text-[24px] font-poppins font-poppinsBold text-textDark text-center mb-6">
           Estimated Moving Costs
         </h2>
         <div className="space-y-4">
@@ -154,7 +154,7 @@ export default function PricingPage() {
 
       {/* Factors Affecting Pricing */}
       <div className="mt-12">
-        <h2 className="text-subheading md:text-[24px] font-poppins font-poppinsBold text-textDark text-center mb-6">
+        <h2 className="text-[26px] md:text-[24px] font-poppins font-poppinsBold text-textDark text-center mb-6">
           Factors Affecting Pricing
         </h2>
         <div className="space-y-6">
@@ -163,10 +163,10 @@ export default function PricingPage() {
               key={index}
               className="border-t border-gray-200 pt-4 first:border-t-0"
             >
-              <h3 className="text-[16px] md:text-[18px] font-poppins font-poppinsSemiBold text-textDark">
+              <h3 className="text-[18px] md:text-[18px] font-poppins font-poppinsSemiBold text-textDark">
                 {factor.factor}
               </h3>
-              <p className="text-[14px] md:text-[16px] font-poppins font-poppinsRegular text-textMedium mt-2">
+              <p className="text-[16px] md:text-[16px] font-poppins font-poppinsRegular text-textMedium mt-2">
                 {factor.description}
               </p>
             </div>
@@ -176,7 +176,7 @@ export default function PricingPage() {
 
       {/* Additional Services Pricing */}
       <div className="mt-12">
-        <h2 className="text-subheading md:text-[24px] font-poppins font-poppinsBold text-textDark text-center mb-6">
+        <h2 className="text-[26px] md:text-[24px] font-poppins font-poppinsBold text-textDark text-center mb-6">
           Additional Services Pricing
         </h2>
         <div className="max-w-2xl mx-auto">
@@ -186,10 +186,10 @@ export default function PricingPage() {
                 key={index}
                 className="flex justify-between py-2 border-t border-gray-200 first:border-t-0"
               >
-                <span className="text-[14px] sm:text-[16px] font-poppins font-poppinsRegular text-textMedium">
+                <span className="text-[16px] sm:text-[16px] font-poppins font-poppinsRegular text-textMedium">
                   {service.service}
                 </span>
-                <span className="text-[14px] sm:text-[16px] font-poppins font-poppinsBold text-textDark">
+                <span className="text-[16px] sm:text-[16px] font-poppins font-poppinsBold text-textDark text-right">
                   {service.cost}
                 </span>
               </div>
@@ -200,7 +200,7 @@ export default function PricingPage() {
 
       {/* Pricing Calculator */}
       <div className="mt-12">
-        <h2 className="text-subheading md:text-[24px] font-poppins font-poppinsBold text-textDark text-center mb-6">
+        <h2 className="text-[26px] md:text-[24px] font-poppins font-poppinsBold text-textDark text-center mb-6">
           Estimate Your Moving Cost
         </h2>
         <PricingCalculator

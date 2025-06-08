@@ -72,21 +72,21 @@ export default function WhyChooseKeshav() {
               className="w-full sm:w-[400px] h-[130px] mx-auto bg-lightPeach rounded-[12px] p-4 flex items-center drop-shadow-[0_4px_8px_rgba(0,0,0,0.15)]"
             >
               {/* Icon */}
-              <div className="w-[34px] h-[34px] mr-4">
+              <div className="w-[36px] h-[36px] mr-4">
                 <Image
                   src={card.icon}
                   alt={`${card.title} feature icon for Keshav Packers and Movers`}
-                  width={34}
-                  height={34}
+                  width={36}
+                  height={36}
                 />
               </div>
 
               {/* Content */}
               <div className="flex-1">
-                <h3 className="text-subheading font-poppins font-poppinsBold text-textDark">
+                <h3 className="text-lg font-poppins font-poppinsBold text-textDark">
                   {card.title}
                 </h3>
-                <p className="text-[12px] font-poppins font-poppinsRegular text-textMedium mt-1">
+                <p className="text-[14px] font-poppins font-poppinsRegular text-textMedium mt-1">
                   {card.description}
                 </p>
               </div>

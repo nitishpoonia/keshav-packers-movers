@@ -7,7 +7,7 @@ const serviceData = {
   "home-relocation": {
     title: "Home Relocation Services",
     tagline: "Hassle-Free Home Shifting with Expert Care",
-    image: "/assets/images/service/home-relocation-hero.jpg",
+    image: "/assets/images/blogs/how-to-choose.jpg",
     content: [
       {
         heading: "Why Choose Us for Home Relocation?",
@@ -36,7 +36,7 @@ const serviceData = {
   "bike-car-relocation": {
     title: "Bike/Car Relocation Services",
     tagline: "Safe and Secure Vehicle Transport Across India",
-    image: "/assets/images/gallery/move-76.jpeg",
+    image: "/assets/images/blogs/how-to-choose.jpg",
     content: [
       {
         heading: "Why Choose Us for Bike/Car Relocation?",
@@ -65,7 +65,7 @@ const serviceData = {
   "office-relocation": {
     title: "Office Relocation Services",
     tagline: "Efficient Office Moves with Minimal Downtime",
-    image: "/assets/images/gallery/move-76.jpeg",
+    image: "/assets/images/blogs/how-to-choose.jpg",
     content: [
       {
         heading: "Why Choose Us for Office Relocation?",
@@ -94,7 +94,7 @@ const serviceData = {
   "packing-unpacking": {
     title: "Packing and Unpacking Services",
     tagline: "Professional Packing for a Stress-Free Move",
-    image: "/assets/images/service/packing-unpacking-hero.jpg",
+    image: "/assets/images/blogs/how-to-choose.jpg",
     content: [
       {
         heading: "Why Choose Our Packing and Unpacking Services?",
@@ -123,7 +123,7 @@ const serviceData = {
   "storage-solutions": {
     title: "Storage Solutions",
     tagline: "Secure and Flexible Storage for Your Belongings",
-    image: "/assets/images/service/storage-solutions-hero.jpg",
+    image: "/assets/images/blogs/how-to-choose.jpg",
     content: [
       {
         heading: "Why Choose Our Storage Solutions?",
@@ -152,7 +152,7 @@ const serviceData = {
   "international-relocation": {
     title: "International Relocation Services",
     tagline: "Seamless Moves Across Borders",
-    image: "/assets/images/service/international-relocation-hero.jpg",
+    image: "/assets/images/blogs/internation-move.jpg",
     content: [
       {
         heading: "Why Choose Us for International Relocation?",
@@ -233,11 +233,12 @@ export default function ServicePage({ params }) {
             style={{ objectFit: "cover" }}
             className="rounded-[12px]"
           />
-          <div className="absolute inset-0 bg-primary bg-opacity-20 flex flex-col justify-center items-center text-center p-4 h-full">
-            <h1 className="text-heading sm:text-[40px] md:text-[48px] lg:text-[56px] font-poppins font-poppinsBold text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.2)]">
+          <div className="absolute inset-0 bg-black/40"></div>
+          <div className="absolute inset-0  bg-opacity-20 flex flex-col justify-center items-center text-center p-4 h-full">
+            <h1 className="text-[36px] sm:text-[40px] md:text-[48px] lg:text-[56px] font-poppins font-poppinsBold text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.2)]">
               {service.title}
             </h1>
-            <p className="text-body sm:text-subheading md:text-[20px] font-poppins font-poppinsRegular text-white mt-2">
+            <p className="text-[20px] sm:text-subheading md:text-[20px] font-poppins font-poppinsRegular text-white mt-2">
               {service.tagline}
             </p>
           </div>
@@ -248,10 +249,10 @@ export default function ServicePage({ params }) {
           {service.content.length > 0 ? (
             service.content.map((section, index) => (
               <div key={index}>
-                <h2 className="text-subheading md:text-[24px] font-poppins font-poppinsBold text-textDark">
+                <h2 className="text-[26px] md:text-[24px] font-poppins font-poppinsBold text-textDark">
                   {section.heading}
                 </h2>
-                <p className="text-[14px] sm:text-[16px] md:text-[18px] font-poppins font-poppinsRegular text-textMedium mt-2">
+                <p className="text-[16px] sm:text-[16px] md:text-[18px] font-poppins font-poppinsRegular text-textMedium mt-2">
                   {section.description}
                 </p>
               </div>

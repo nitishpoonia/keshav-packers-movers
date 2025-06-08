@@ -55,7 +55,7 @@ export default function Services() {
   ];
 
   return (
-    <section className="relative py-12">
+    <section className="relative pt-12">
       {/* Background Wave Pattern */}
       <div className="absolute inset-0 top-0 h-[800px]">
         <Image

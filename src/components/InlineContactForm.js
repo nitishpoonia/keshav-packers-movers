@@ -63,13 +63,16 @@ export default function InlineContactForm() {
 
   return (
     <div className="w-full max-w-4xl mx-auto">
+      <h2 className="text-[26px] md:text-[24px] font-poppins font-poppinsBold text-textDark text-center mb-2">
+        Enter details and we will get back to you...
+      </h2>
       <form onSubmit={handleSubmit} className="space-y-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {/* From City */}
           <div>
             <label
               htmlFor="from"
-              className="block text-[14px] md:text-[16px] font-poppins font-poppinsSemiBold text-textDark mb-1"
+              className="block text-[18px] md:text-[18px] font-poppins font-poppinsSemiBold text-textDark mb-1 text-left"
             >
               From
             </label>
@@ -80,7 +83,7 @@ export default function InlineContactForm() {
               value={formData.from}
               onChange={handleInputChange}
               placeholder="Enter starting city"
-              className="w-full p-3 rounded-lg bg-white shadow-[0_2px_4px_rgba(0,0,0,0.1)] placeholder:text-textMedium text-[13px] font-poppins font-poppinsRegular text-textDark focus:outline-none focus:ring-2 focus:ring-primary"
+              className="w-full p-3 rounded-lg bg-white shadow-[0_2px_4px_rgba(0,0,0,0.1)] placeholder:text-textMedium text-[16px] font-poppins font-poppinsRegular text-textDark focus:outline-none focus:ring-2 focus:ring-primary"
               required
             />
           </div>
@@ -89,7 +92,7 @@ export default function InlineContactForm() {
           <div>
             <label
               htmlFor="to"
-              className="block text-[14px] md:text-[16px] font-poppins font-poppinsSemiBold text-textDark mb-1"
+              className="block text-[18px] md:text-[18px] font-poppins font-poppinsSemiBold text-textDark mb-1 text-left"
             >
               To
             </label>
@@ -100,7 +103,7 @@ export default function InlineContactForm() {
               value={formData.to}
               onChange={handleInputChange}
               placeholder="Enter destination city"
-              className="w-full p-3 rounded-lg bg-white shadow-[0_2px_4px_rgba(0,0,0,0.1)] placeholder:text-textMedium text-[13px] font-poppins font-poppinsRegular text-textDark focus:outline-none focus:ring-2 focus:ring-primary"
+              className="w-full p-3 rounded-lg bg-white shadow-[0_2px_4px_rgba(0,0,0,0.1)] placeholder:text-textMedium text-[16px] font-poppins font-poppinsRegular text-textDark focus:outline-none focus:ring-2 focus:ring-primary"
               required
             />
           </div>
@@ -111,7 +114,7 @@ export default function InlineContactForm() {
           <div>
             <label
               htmlFor="phone"
-              className="block text-[14px] md:text-[16px] font-poppins font-poppinsSemiBold text-textDark mb-1"
+              className="block text-[18px] md:text-[18px] font-poppins font-poppinsSemiBold text-textDark mb-1 text-left"
             >
               Phone Number
             </label>
@@ -122,7 +125,7 @@ export default function InlineContactForm() {
               value={formData.phone}
               onChange={handleInputChange}
               placeholder="Enter your phone number"
-              className="w-full p-3 rounded-lg bg-white shadow-[0_2px_4px_rgba(0,0,0,0.1)] placeholder:text-textMedium text-[13px] font-poppins font-poppinsRegular text-textDark focus:outline-none focus:ring-2 focus:ring-primary"
+              className="w-full p-3 rounded-lg bg-white shadow-[0_2px_4px_rgba(0,0,0,0.1)] placeholder:text-textMedium text-[16px] font-poppins font-poppinsRegular text-textDark focus:outline-none focus:ring-2 focus:ring-primary"
               required
             />
           </div>
@@ -131,7 +134,7 @@ export default function InlineContactForm() {
           <div>
             <label
               htmlFor="movingTime"
-              className="block text-[14px] md:text-[16px] font-poppins font-poppinsSemiBold text-textDark mb-1"
+              className="block text-[18px] md:text-[18px] font-poppins font-poppinsSemiBold text-textDark mb-1 text-left"
             >
               When are you planning to move?
             </label>
@@ -140,7 +143,7 @@ export default function InlineContactForm() {
               name="movingTime"
               value={formData.movingTime}
               onChange={handleInputChange}
-              className="w-full p-3 rounded-lg bg-white shadow-[0_2px_4px_rgba(0,0,0,0.1)] text-[13px] font-poppins font-poppinsRegular text-textDark focus:outline-none focus:ring-2 focus:ring-primary"
+              className="w-full p-3 rounded-lg bg-white shadow-[0_2px_4px_rgba(0,0,0,0.1)] text-[16px] font-poppins font-poppinsRegular text-textDark focus:outline-none focus:ring-2 focus:ring-primary"
               required
             >
               <option value="">Select moving time</option>
@@ -157,7 +160,7 @@ export default function InlineContactForm() {
         <div>
           <label
             htmlFor="service"
-            className="block text-[14px] md:text-[16px] font-poppins font-poppinsSemiBold text-textDark mb-1"
+            className="block text-[18px] md:text-[18px] font-poppins font-poppinsSemiBold text-textDark mb-1 text-left"
           >
             Service Type
           </label>
@@ -166,7 +169,7 @@ export default function InlineContactForm() {
             name="service"
             value={formData.service}
             onChange={handleInputChange}
-            className="w-full p-3 rounded-lg bg-white shadow-[0_2px_4px_rgba(0,0,0,0.1)] text-[13px] font-poppins font-poppinsRegular text-textDark focus:outline-none focus:ring-2 focus:ring-primary"
+            className="w-full p-3 rounded-lg bg-white shadow-[0_2px_4px_rgba(0,0,0,0.1)] text-[16px] font-poppins font-poppinsRegular text-textDark focus:outline-none focus:ring-2 focus:ring-primary"
             required
           >
             <option value="">Select service type</option>
@@ -182,7 +185,7 @@ export default function InlineContactForm() {
         <button
           type="submit"
           disabled={isLoading}
-          className="w-full bg-primary text-white py-3 rounded-lg font-poppins font-poppinsSemiBold hover:bg-primary/90 transition-colors disabled:opacity-50"
+          className="w-full bg-primary text-white py-3 rounded-lg font-poppins font-poppinsSemiBold hover:bg-primary/90 transition-colors disabled:opacity-50 text-[18px]"
         >
           {isLoading ? "Submitting..." : "Get Free Quote"}
         </button>

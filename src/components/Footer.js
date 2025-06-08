@@ -608,8 +608,8 @@ export default function Footer() {
     <footer className="bg-[#333] text-white py-8">
       <div className="container mx-auto px-4">
         <div className="mt-2 mb-10">
-          <h2 className="text-[22px] sm:text-[26px] md:text-[30px] font-poppins font-poppinsBold text-primary text-center">
-            Packers and Movers Across India
+          <h2 className="text-[26px] sm:text-[26px] md:text-[30px] font-poppins font-poppinsBold text-primary text-center">
+            Keshav Packers and Movers
           </h2>
           <p className="text-[14px] sm:text-[16px] md:text-[18px] font-poppins font-poppinsRegular text-gray-300 text-center mt-2 max-w-3xl mx-auto">
             We provide moving services across all Indian states and Union
@@ -630,7 +630,7 @@ export default function Footer() {
                 className="mt-2"
               />
             </Link>
-            <p className="text-[14px] sm:text-[16px] md:text-[18px] font-poppins font-poppinsRegular text-gray-300 mt-2">
+            <p className="text-[16px] sm:text-[16px] md:text-[18px] font-poppins font-poppinsRegular text-gray-300 mt-2">
               Your trusted partner for seamless relocation across India. We move
               everything with care and efficiency.
             </p>
@@ -645,7 +645,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/services"
-                  className="text-[14px] sm:text-[16px] md:text-[18px] font-poppins font-poppinsRegular text-gray-300 hover:text-primary"
+                  className="text-[16px] sm:text-[16px] md:text-[18px] font-poppins font-poppinsRegular text-gray-300 hover:text-primary"
                 >
                   Services
                 </Link>
@@ -653,7 +653,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/faq"
-                  className="text-[14px] sm:text-[16px] md:text-[18px] font-poppins font-poppinsRegular text-gray-300 hover:text-primary"
+                  className="text-[16px] sm:text-[16px] md:text-[18px] font-poppins font-poppinsRegular text-gray-300 hover:text-primary"
                 >
                   FAQ
                 </Link>
@@ -661,7 +661,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/contact"
-                  className="text-[14px] sm:text-[16px] md:text-[18px] font-poppins font-poppinsRegular text-gray-300 hover:text-primary"
+                  className="text-[16px] sm:text-[16px] md:text-[18px] font-poppins font-poppinsRegular text-gray-300 hover:text-primary"
                 >
                   Contact
                 </Link>
@@ -669,7 +669,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/pricing"
-                  className="text-[14px] sm:text-[16px] md:text-[18px] font-poppins font-poppinsRegular text-gray-300 hover:text-primary"
+                  className="text-[16px] sm:text-[16px] md:text-[18px] font-poppins font-poppinsRegular text-gray-300 hover:text-primary"
                 >
                   Pricing
                 </Link>
@@ -677,7 +677,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/about"
-                  className="text-[14px] sm:text-[16px] md:text-[18px] font-poppins font-poppinsRegular text-gray-300 hover:text-primary"
+                  className="text-[16px] sm:text-[16px] md:text-[18px] font-poppins font-poppinsRegular text-gray-300 hover:text-primary"
                 >
                   About
                 </Link>
@@ -685,7 +685,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/gallery"
-                  className="text-[14px] sm:text-[16px] md:text-[18px] font-poppins font-poppinsRegular text-gray-300 hover:text-primary"
+                  className="text-[16px] sm:text-[16px] md:text-[18px] font-poppins font-poppinsRegular text-gray-300 hover:text-primary"
                 >
                   Gallery
                 </Link>
@@ -698,14 +698,14 @@ export default function Footer() {
               Contact Us
             </h4>
             <ul className="mt-2 space-y-2">
-              <li className="text-[14px] sm:text-[16px] md:text-[18px] font-poppins font-poppinsRegular text-gray-300">
+              <li className="text-[16px] sm:text-[16px] md:text-[18px] font-poppins font-poppinsRegular text-gray-300">
                 Shop No. 10, Shri Kishore Tower, Bajari Mandi Road, Sawranpuri,
                 Kanakpura, Jaipur, 302034
               </li>
-              <li className="text-[14px] sm:text-[16px] md:text-[18px] font-poppins font-poppinsRegular text-gray-300">
+              <li className="text-[16px] sm:text-[16px] md:text-[18px] font-poppins font-poppinsRegular text-gray-300">
                 Phone: +91 7852000465, +91 7568428665
               </li>
-              <li className="text-[14px] sm:text-[16px] md:text-[18px] font-poppins font-poppinsRegular text-gray-300">
+              <li className="text-[16px] sm:text-[16px] md:text-[18px] font-poppins font-poppinsRegular text-gray-300">
                 Email: keshavpackerandmovers@gmail.com
               </li>
             </ul>
@@ -725,8 +725,8 @@ export default function Footer() {
                 <Image
                   src="/assets/icons/facebook-icon.svg"
                   alt="Facebook social media icon - Follow Keshav Packers and Movers"
-                  width={24}
-                  height={24}
+                  width={30}
+                  height={30}
                   className="hover:opacity-80"
                 />
               </Link>
@@ -739,8 +739,21 @@ export default function Footer() {
                 <Image
                   src="/assets/icons/instagram-icon.svg"
                   alt="Instagram social media icon - Follow Keshav Packers and Movers"
-                  width={24}
-                  height={24}
+                  width={30}
+                  height={30}
+                  className="hover:opacity-80"
+                />
+              </Link>
+              <Link
+                href="https://www.instagram.com/keshavpackerandmovers/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  src="/assets/icons/youtube-icon.png"
+                  alt="Youtube social media icon - Follow Keshav Packers and Movers"
+                  width={30}
+                  height={30}
                   className="hover:opacity-80"
                 />
               </Link>
@@ -749,8 +762,8 @@ export default function Footer() {
         </div>
 
         {/* Bottom Section: Copyright */}
-        <div className="mt-8 pt-4 text-center border-t border-gray-600">
-          <p className="text-[14px] sm:text-[16px] font-poppins font-poppinsRegular text-gray-400">
+        <div className="mt-8 mb-10 pt-4 text-center border-t border-gray-600">
+          <p className="text-[16px] sm:text-[16px] font-poppins font-poppinsRegular text-gray-400">
             © {new Date().getFullYear()} Keshav Packers and Movers. All rights
             reserved.
           </p>

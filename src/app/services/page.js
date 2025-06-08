@@ -163,10 +163,10 @@ export default function ServicesPage() {
   return (
     <div className="container mx-auto px-4 py-12">
       {/* Header Section */}
-      <h1 className="text-heading sm:text-[40px] md:text-[48px] lg:text-[56px] font-poppins font-poppinsBold text-textDark text-center">
+      <h1 className="text-[30px] sm:text-[40px] md:text-[48px] lg:text-[56px] font-poppins font-poppinsBold text-textDark text-center">
         Our Moving Services
       </h1>
-      <p className="text-body sm:text-subheading md:text-[20px] font-poppins font-poppinsRegular text-textMedium text-center mt-4 max-w-3xl mx-auto">
+      <p className="text-body sm:text-subheading md:text-[20px] font-poppins font-poppinsRegular text-textMedium text-center mt-2 max-w-3xl mx-auto">
         At Keshav Packers and Movers, we offer a comprehensive range of
         relocation services designed to make your move seamless and stress-free,
         anywhere in India.
@@ -184,11 +184,12 @@ export default function ServicesPage() {
                 style={{ objectFit: "cover" }}
                 className="rounded-[12px] group-hover:scale-105 transition-transform duration-300"
               />
+              <div className="absolute inset-0 bg-black/40"></div>
               <div className="absolute inset-0  bg-opacity-40 flex flex-col justify-end p-4 group-hover:bg-opacity-50 transition-all duration-300">
-                <h3 className="text-[18px] md:text-[20px] font-poppins font-poppinsBold text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.2)]">
+                <h3 className="text-[20px] md:text-[20px] font-poppins font-poppinsBold text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.2)]">
                   {service.title}
                 </h3>
-                <p className="text-[14px] font-poppins font-poppinsRegular text-white mt-1">
+                <p className="text-[16px] font-poppins font-poppinsRegular text-white mt-1">
                   {service.tagline}
                 </p>
               </div>
@@ -199,7 +200,7 @@ export default function ServicesPage() {
 
       {/* Detailed Services Section */}
       <div className="mt-12">
-        <h2 className="text-subheading md:text-[24px] font-poppins font-poppinsBold text-textDark text-center mb-6">
+        <h2 className="text-[26px] md:text-[24px] font-poppins font-poppinsBold text-textDark text-center mb-6">
           Explore Our Services in Detail
         </h2>
         <div className="space-y-4">
@@ -209,10 +210,10 @@ export default function ServicesPage() {
               title={service.title}
               content={service.content.map((section) => (
                 <div key={section.heading} className="mb-4">
-                  <h4 className="text-[16px] md:text-[18px] font-poppins font-poppinsSemiBold text-textDark">
+                  <h4 className="text-[18px] md:text-[18px] font-poppins font-poppinsSemiBold text-textDark">
                     {section.heading}
                   </h4>
-                  <p className="text-[14px] sm:text-[16px] font-poppins font-poppinsRegular text-textMedium mt-2">
+                  <p className="text-[16px] sm:text-[16px] font-poppins font-poppinsRegular text-textMedium mt-2">
                     {section.description}
                   </p>
                 </div>
@@ -224,33 +225,26 @@ export default function ServicesPage() {
 
       {/* Company Overview */}
       <div className="mt-12">
-        <h2 className="text-subheading md:text-[24px] font-poppins font-poppinsBold text-textDark text-center mb-6">
+        <h2 className="text-[26px] md:text-[24px] font-poppins font-poppinsBold text-textDark text-center mb-6">
           Why Choose Keshav Packers and Movers?
         </h2>
         <div className="max-w-3xl mx-auto space-y-6">
-          <p className="text-[14px] sm:text-[16px] font-poppins font-poppinsRegular text-textMedium text-center">
-            With over 10 years of trusted relocation services, Keshav Packers
-            and Movers has helped thousands of families, individuals, and
-            businesses move seamlessly across India. We pride ourselves on our
-            commitment to customer satisfaction, transparency, and care in every
-            move we undertake.
-          </p>
           <div className="space-y-4">
             <div>
-              <h3 className="text-[16px] md:text-[18px] font-poppins font-poppinsSemiBold text-textDark">
+              <h3 className="text-[18px] md:text-[18px] font-poppins font-poppinsBold text-textDark">
                 Nationwide Coverage
               </h3>
-              <p className="text-[14px] sm:text-[16px] font-poppins font-poppinsRegular text-textMedium">
+              <p className="text-[16px] sm:text-[16px] font-poppins font-poppinsRegular text-textMedium">
                 We serve all major cities across India, from Delhi to Chennai,
                 Mumbai to Kolkata, and beyond. No matter where you’re moving,
                 we’ve got you covered.
               </p>
             </div>
             <div>
-              <h3 className="text-[16px] md:text-[18px] font-poppins font-poppinsSemiBold text-textDark">
+              <h3 className="text-[18px] md:text-[18px] font-poppins font-poppinsBold text-textDark">
                 Our Values
               </h3>
-              <p className="text-[14px] sm:text-[16px] font-poppins font-poppinsRegular text-textMedium">
+              <p className="text-[16px] sm:text-[16px] font-poppins font-poppinsRegular text-textMedium">
                 At Keshav Packers and Movers, we prioritize reliability,
                 transparency, and customer care. We provide clear pricing,
                 dedicated support, and careful handling of your belongings to
@@ -258,32 +252,32 @@ export default function ServicesPage() {
               </p>
             </div>
             <div>
-              <h3 className="text-[16px] md:text-[18px] font-poppins font-poppinsSemiBold text-textDark">
+              <h3 className="text-[18px] md:text-[18px] font-poppins font-poppinsBold text-textDark">
                 Expert Team
               </h3>
-              <p className="text-[14px] sm:text-[16px] font-poppins font-poppinsRegular text-textMedium">
+              <p className="text-[16px] sm:text-[16px] font-poppins font-poppinsRegular text-textMedium">
                 Our trained professionals have extensive expertise in handling
                 all types of moves, from small apartments to large offices. We
                 use modern equipment and techniques to ensure your items are
                 safe and secure.
               </p>
             </div>
-            <div>
-              <h3 className="text-[16px] md:text-[18px] font-poppins font-poppinsSemiBold text-textDark">
+            {/* <div>
+              <h3 className="text-[18px] md:text-[18px] font-poppins font-poppinsBold text-textDark">
                 Certifications & Awards
               </h3>
-              <p className="text-[14px] sm:text-[16px] font-poppins font-poppinsRegular text-textMedium">
+              <p className="text-[16px] sm:text-[16px] font-poppins font-poppinsRegular text-textMedium">
                 We are certified by [Placeholder Organization] and have been
                 recognized as a leader in the relocation industry for our
                 commitment to excellence.
               </p>
-            </div>
+            </div> */}
           </div>
           <div className="mt-8">
-            <h3 className="text-[16px] md:text-[18px] font-poppins font-poppinsSemiBold text-textDark text-center mb-4">
+            <h3 className="text-[20px] md:text-[18px] font-poppinsBold font-Bold text-textDark text-center mb-1">
               Meet Our Team
             </h3>
-            <p className="text-[14px] sm:text-[16px] font-poppins font-poppinsRegular text-textMedium text-center">
+            <p className="text-[16px] sm:text-[16px] font-poppins font-poppinsRegular text-textMedium text-center">
               Our team of dedicated professionals is here to make your move as
               smooth as possible. With years of experience and a passion for
               customer service, we’re committed to delivering exceptional
@@ -292,7 +286,7 @@ export default function ServicesPage() {
             <div className="flex justify-center mt-4">
               <Link
                 href="/about"
-                className="bg-gray-700 text-white font-poppins font-poppinsSemiBold text-[14px] sm:text-[16px] md:text-[18px] px-4 py-2 sm:px-6 sm:py-3 rounded-lg cursor-pointer shadow-[0_4px_6px_rgba(0,0,0,0.1)] hover:shadow-[0_4px_6px_rgba(0,0,0,0.15)]"
+                className="bg-gray-700 text-white font-poppins font-poppinsSemiBold text-[16px] sm:text-[16px] md:text-[18px] px-4 py-2 sm:px-6 sm:py-3 rounded-lg cursor-pointer shadow-[0_4px_6px_rgba(0,0,0,0.1)] hover:shadow-[0_4px_6px_rgba(0,0,0,0.15)]"
               >
                 Learn More About Us
               </Link>
@@ -303,7 +297,7 @@ export default function ServicesPage() {
 
       {/* Call to Action */}
       <div className="mt-12 text-center border-t border-gray-300 pt-8">
-        <div className="flex justify-center mt-4 space-x-4">
+        <div className="flex mt-4 space-x-4">
           <InlineContactForm />
         </div>
       </div>

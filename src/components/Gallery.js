@@ -148,10 +148,10 @@ export default function Gallery({ rows }) {
       <section className="mt-12">
         {/* Header Section */}
         <div className="text-center mb-12">
-          <h2 className="text-subheading md:text-[24px] font-poppins font-poppinsBold text-textDark">
+          <h2 className="text-[26px] md:text-[24px] font-poppins font-poppinsBold text-textDark">
             What Our Customers Say
           </h2>
-          <p className="text-body sm:text-subheading md:text-[20px] font-poppins font-poppinsRegular text-textMedium mt-4 max-w-3xl mx-auto">
+          <p className="text-[20px] sm:text-subheading md:text-[20px] font-poppins font-poppinsRegular text-textMedium mt-4 max-w-3xl mx-auto">
             Hear from our satisfied customers about their seamless relocation
             experiences with Keshav Packers and Movers across India.
           </p>

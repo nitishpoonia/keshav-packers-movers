@@ -75,10 +75,10 @@ export default function FAQPage() {
   return (
     <div className="container mx-auto px-4 py-12">
       {/* Header Section */}
-      <h1 className="text-heading sm:text-[40px] md:text-[48px] lg:text-[56px] font-poppins font-poppinsBold text-textDark text-center">
+      <h1 className="text-[36px] sm:text-[40px] md:text-[48px] lg:text-[56px] font-poppins font-poppinsBold text-textDark text-center">
         Frequently Asked Questions
       </h1>
-      <p className="text-body sm:text-subheading md:text-[20px] font-poppins font-poppinsRegular text-textMedium text-center mt-4 max-w-3xl mx-auto">
+      <p className="text-[20px] sm:text-subheading md:text-[20px] font-poppins font-poppinsRegular text-textMedium text-center mt-4 max-w-3xl mx-auto">
         Find answers to common questions about our packing and moving services
         across India. Need more help? Request a free quote today!
       </p>
@@ -92,10 +92,10 @@ export default function FAQPage() {
 
       {/* Call to Action */}
       <div className="mt-12 text-center border-t border-gray-300 pt-8">
-        <h2 className="text-subheading md:text-[24px] font-poppins font-poppinsBold text-textDark">
+        <h2 className="text-[26px] md:text-[24px] font-poppins font-poppinsBold text-textDark">
           Still Have Questions?
         </h2>
-        <p className="text-body sm:text-subheading md:text-[20px] font-poppins font-poppinsRegular text-textMedium mt-2">
+        <p className="text-[16px] sm:text-subheading md:text-[20px] font-poppins font-poppinsRegular text-textMedium mt-2">
           Contact us for more information or request a free quote to get
           started.
         </p>

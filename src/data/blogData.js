@@ -2,6 +2,7 @@ const blogData = {
   "tips-for-home-relocation": {
     slug: "tips-for-home-relocation",
     title: "Top 10 Tips for a Stress-Free Home Relocation",
+    image: "/assets/images/blogs/tips-image.jpg",
     excerpt:
       "Discover expert tips to make your home relocation smooth and stress-free with Keshav Packers and Movers.",
     content: [
@@ -67,9 +68,10 @@ const blogData = {
   },
   "choose-best-packers-movers": {
     slug: "choose-best-packers-movers",
-    title: "How to Choose the Best Packers and Movers in India",
+    image: "/assets/images/blogs/how-to-choose.jpg",
+    title: "How to Choose packers and movers for your move?",
     excerpt:
-      "Learn how to select the right packers and movers for a seamless relocation experience in India.",
+      "Learn how to select the right packers and movers for a seamless relocation experience",
     content: [
       {
         heading: "1. Check Experience and Reputation",
@@ -114,6 +116,7 @@ const blogData = {
   "international-relocation-guide": {
     slug: "international-relocation-guide",
     title: "A Complete Guide to International Relocation from India",
+    image: "/assets/images/blogs/internation-move.jpg",
     excerpt:
       "Planning to move abroad? This guide covers everything you need for a smooth international relocation.",
     content: [

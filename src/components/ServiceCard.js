@@ -26,12 +26,12 @@ export default function ServiceCard({
       {/* Content Section */}
       <div className="p-4 sm:p-5 flex flex-col gap-2 min-h-[120px]">
         {/* Title */}
-        <h3 className="text-subheading sm:text-[18px] md:text-[20px] font-poppins font-poppinsBold text-textDark leading-tight text-center">
+        <h3 className="text-lg sm:text-[18px] md:text-[20px] font-poppins font-poppinsBold text-textDark leading-tight text-center">
           {title}
         </h3>
 
         {/* Description */}
-        <p className="text-[12px] sm:text-[13px] md:text-[14px] font-poppins font-poppinsRegular text-textMedium leading-snug text-center flex-grow">
+        <p className="text-[14px] sm:text-[13px] md:text-[14px] font-poppins font-poppinsRegular text-textMedium leading-snug text-center flex-grow">
           {description}
         </p>
 
@@ -42,7 +42,7 @@ export default function ServiceCard({
               className="
                 flex items-center space-x-2 
                 bg-gradient-to-r from-primary to-secondary 
-                text-white font-poppins font-poppinsSemiBold text-[14px] sm:text-[13px] md:text-[14px] 
+                text-white font-poppins font-poppinsSemiBold text-[16px] sm:text-[13px] md:text-[14px] 
                 px-3 py-2 sm:px-4 sm:py-1.5 md:px-5 md:py-2 rounded-lg 
                 shadow-[0_4px_6px_rgba(0,0,0,0.1)] 
                 group-hover:shadow-[0_6px_12px_rgba(0,0,0,0.15)] 

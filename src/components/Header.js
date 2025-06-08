@@ -45,6 +45,11 @@ export default function Header() {
       href: "https://www.instagram.com/keshavpackerandmovers/",
       icon: "/assets/icons/instagram-icon.svg",
     },
+    {
+      name: "Youtube",
+      href: "https://www.youtube.com/@KeshavPackersAndMovers",
+      icon: "/assets/icons/youtube-icon.png",
+    },
   ];
 
   return (
@@ -133,8 +138,8 @@ export default function Header() {
             {/* Modal Header */}
             <div className="flex justify-between items-center mb-6">
               <Link href="/" onClick={toggleModal}>
-                <h2 className="text-subheading font-poppins font-poppinsBold text-textDark">
-                  Keshav Packers
+                <h2 className="text-xl font-poppins font-poppinsBold text-textDark">
+                  Keshav Packers And Movers
                 </h2>
               </Link>
               <button
@@ -202,8 +207,8 @@ export default function Header() {
 
             {/* Social Media Links */}
             <div className="mt-6 border-t border-gray-300 pt-4">
-              <h3 className="text-subheading font-poppins font-poppinsBold text-textDark mb-2">
-                Follow Us
+              <h3 className="text-xl font-poppins font-poppinsBold text-textDark mb-2">
+                Explore the process
               </h3>
               <div className="flex space-x-4">
                 {socialMediaLinks.map((link) => (
@@ -217,8 +222,8 @@ export default function Header() {
                     <Image
                       src={link.icon}
                       alt={`${link.name} social media icon for Keshav Packers and Movers`}
-                      width={24}
-                      height={24}
+                      width={30}
+                      height={30}
                       className="hover:opacity-80"
                     />
                   </Link>
@@ -227,15 +232,15 @@ export default function Header() {
             </div>
 
             {/* Contact Info */}
-            <div className="mt-4 border-t border-gray-300 pt-4">
-              <h3 className="text-subheading font-poppins font-poppinsBold text-textDark mb-2">
-                Contact Us
+            <div className="mt-4 mb-14  border-t border-gray-300 pt-4">
+              <h3 className="text-xl font-poppins font-poppinsBold text-textDark mb-2">
+                Get in touch
               </h3>
-              <p className="text-[14px] font-poppins font-poppinsRegular text-textMedium">
-                Phone: +91 123-456-7890
+              <p className="text-[16px] font-poppins font-poppinsRegular text-textMedium">
+                Phone: +91 7852000465, +91 7568428665
               </p>
-              <p className="text-[14px] font-poppins font-poppinsRegular text-textMedium">
-                Email: contact@keshavpackers.com
+              <p className="text-[16px] font-poppins font-poppinsRegular text-textMedium">
+                Email: keshavpackerandmovers@gmail.com
               </p>
             </div>
           </div>

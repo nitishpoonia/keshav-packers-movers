@@ -149,12 +149,36 @@ nav button.hamburger-menu:hover span.hamburger-bar {
   animation: gradientShift 10s ease infinite;
 }
 
+.animate-info-gradient {
+  background: linear-gradient(45deg, #FF5733, #D2691E, #FF5733, #FFC107);
+  background-size: 300% 300%;
+  animation: infoGradientShift 8s ease infinite;
+}
+
 @keyframes gradientShift {
   0% {
     background-position: 0% 50%;
   }
   50% {
     background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes infoGradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 100% 50%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 0% 100%;
   }
   100% {
     background-position: 0% 50%;

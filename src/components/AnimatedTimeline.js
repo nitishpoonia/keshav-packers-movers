@@ -96,7 +96,7 @@ export default function AnimatedTimeline({ steps, scrollYProgress }) {
           </div>
 
           {/* Description */}
-          <p className="mt-2 text-[14px] sm:text-[16px] md:text-[18px] font-poppins font-poppinsRegular text-textMedium leading-relaxed">
+          <p className="mt-2 text-[16px] sm:text-[16px] md:text-[18px] font-poppins font-poppinsRegular text-textMedium leading-relaxed">
             {step.description}
           </p>
         </motion.div>

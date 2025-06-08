@@ -80,10 +80,10 @@ export default function AboutPage() {
   return (
     <div className="container mx-auto px-4 py-12">
       {/* Header Section */}
-      <h1 className="text-heading sm:text-[40px] md:text-[48px] lg:text-[56px] font-poppins font-poppinsBold text-textDark text-center">
+      <h1 className="text-[30px] sm:text-[40px] md:text-[48px] lg:text-[56px] font-poppins font-poppinsBold text-textDark text-center">
         About Keshav Packers and Movers
       </h1>
-      <p className="text-body sm:text-subheading md:text-[20px] font-poppins font-poppinsRegular text-textMedium text-center mt-4 max-w-3xl mx-auto">
+      <p className="text-[20px] sm:text-subheading md:text-[20px] font-poppins font-poppinsRegular text-textMedium text-center mt-4 max-w-3xl mx-auto">
         With over a decade of experience, Keshav Packers and Movers is your
         trusted partner for seamless relocation services across India. Discover
         our story, values, and the team that makes your move effortless.
@@ -93,10 +93,10 @@ export default function AboutPage() {
       <div className="mt-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           <div>
-            <h2 className="text-subheading md:text-[24px] font-poppins font-poppinsBold text-textDark mb-4">
+            <h2 className="text-[26px] md:text-[24px] font-poppins font-poppinsBold text-textDark mb-4">
               Our Story
             </h2>
-            <p className="text-[14px] sm:text-[16px] font-poppins font-poppinsRegular text-textMedium mb-4">
+            <p className="text-[16px] sm:text-[16px] font-poppins font-poppinsRegular text-textMedium mb-4">
               At Keshav Packers and Movers, we understand that moving can be
               stressful—but it doesn&apos;t have to be. Based in the heart of
               Jaipur, we offer fast, secure, and reliable packing and moving
@@ -105,9 +105,9 @@ export default function AboutPage() {
               or vehicle, our expert team ensures everything reaches its
               destination safely and on time.
             </p>
-            <p className="text-[14px] sm:text-[16px] font-poppins font-poppinsRegular text-textMedium">
+            <p className="text-[16px] sm:text-[16px] font-poppins font-poppinsRegular text-textMedium">
               With years of hands-on experience and a strong local presence,
-              Keshav Packers and Movers has built a reputation for trust and
+              we have built a reputation for trust and
               efficiency in Jaipur and surrounding areas. From careful packing
               to timely delivery, we handle every step with professionalism and
               care—so you can focus on settling into your new space, while we
@@ -128,7 +128,7 @@ export default function AboutPage() {
 
       {/* Mission and Values */}
       <div className="mt-12">
-        <h2 className="text-subheading md:text-[24px] font-poppins font-poppinsBold text-textDark text-center mb-6">
+        <h2 className="text-[26px] md:text-[24px] font-poppins font-poppinsBold text-textDark text-center mb-6">
           Our Mission and Values
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -140,10 +140,10 @@ export default function AboutPage() {
               height={48}
               className="mx-auto mb-4"
             />
-            <h3 className="text-[16px] md:text-[18px] font-poppins font-poppinsSemiBold text-textDark">
+            <h3 className="text-[18px] md:text-[18px] font-poppins font-poppinsSemiBold text-textDark">
               Reliability
             </h3>
-            <p className="text-[14px] sm:text-[16px] font-poppins font-poppinsRegular text-textMedium mt-2">
+            <p className="text-[16px] sm:text-[16px] font-poppins font-poppinsRegular text-textMedium mt-2">
               We deliver on our promises, ensuring your move is on time and
               hassle-free.
             </p>
@@ -156,10 +156,10 @@ export default function AboutPage() {
               height={48}
               className="mx-auto mb-4"
             />
-            <h3 className="text-[16px] md:text-[18px] font-poppins font-poppinsSemiBold text-textDark">
+            <h3 className="text-[18px] md:text-[18px] font-poppins font-poppinsSemiBold text-textDark">
               Transparency
             </h3>
-            <p className="text-[14px] sm:text-[16px] font-poppins font-poppinsRegular text-textMedium mt-2">
+            <p className="text-[16px] sm:text-[16px] font-poppins font-poppinsRegular text-textMedium mt-2">
               Clear pricing with no hidden fees, so you know exactly what to
               expect.
             </p>
@@ -172,10 +172,10 @@ export default function AboutPage() {
               height={48}
               className="mx-auto mb-4"
             />
-            <h3 className="text-[16px] md:text-[18px] font-poppins font-poppinsSemiBold text-textDark">
+            <h3 className="text-[18px] md:text-[18px] font-poppins font-poppinsSemiBold text-textDark">
               Customer Care
             </h3>
-            <p className="text-[14px] sm:text-[16px] font-poppins font-poppinsRegular text-textMedium mt-2">
+            <p className="text-[16px] sm:text-[16px] font-poppins font-poppinsRegular text-textMedium mt-2">
               Your satisfaction is our priority—we&apos;re with you every step
               of the way.
             </p>
@@ -188,10 +188,10 @@ export default function AboutPage() {
               height={48}
               className="mx-auto mb-4"
             />
-            <h3 className="text-[16px] md:text-[18px] font-poppins font-poppinsSemiBold text-textDark">
+            <h3 className="text-[18px] md:text-[18px] font-poppins font-poppinsSemiBold text-textDark">
               Safety
             </h3>
-            <p className="text-[14px] sm:text-[16px] font-poppins font-poppinsRegular text-textMedium mt-2">
+            <p className="text-[16px] sm:text-[16px] font-poppins font-poppinsRegular text-textMedium mt-2">
               We handle your belongings with the utmost care, using high-quality
               materials.
             </p>

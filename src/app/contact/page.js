@@ -35,6 +35,11 @@ const socialMediaLinks = [
     href: "https://www.instagram.com/keshavpackerandmovers/",
     icon: "/assets/icons/instagram-icon.svg",
   },
+  {
+    name: "Youtube",
+    href: "https://www.youtube.com/@KeshavPackersAndMovers",
+    icon: "/assets/icons/youtube-icon.png",
+  },
 ];
 
 // Generate metadata for SEO
@@ -60,9 +65,9 @@ export async function generateMetadata() {
 
 export default function ContactPage() {
   return (
-    <div className="container mx-auto px-4 py-12">
+    <div className="container mx-auto px-4 py-12 pt-6">
       {/* Header Section */}
-      <h1 className="text-heading sm:text-[40px] md:text-[48px] lg:text-[56px] font-poppins font-poppinsBold text-textDark text-center">
+      <h1 className="text-[36px] sm:text-[40px] md:text-[48px] lg:text-[56px] font-poppins font-poppinsBold text-textDark text-center">
         Contact Us
       </h1>
       <p className="text-body sm:text-subheading md:text-[20px] font-poppins font-poppinsRegular text-textMedium text-center mt-4 max-w-3xl mx-auto">
@@ -74,7 +79,7 @@ export default function ContactPage() {
       <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-8">
         {/* Contact Form */}
         <div>
-          <h2 className="text-subheading md:text-[24px] font-poppins font-poppinsBold text-textDark mb-4">
+          <h2 className="text-[26px] md:text-[24px] font-poppins font-poppinsBold text-textDark mb-4">
             Send Us a Message
           </h2>
 
@@ -83,42 +88,42 @@ export default function ContactPage() {
 
         {/* Contact Details */}
         <div>
-          <h2 className="text-subheading md:text-[24px] font-poppins font-poppinsBold text-textDark mb-4">
+          <h2 className="text-[26px] md:text-[24px] font-poppins font-poppinsBold text-textDark mb-4">
             Our Contact Details
           </h2>
           <div className="space-y-4">
             <div>
-              <h3 className="text-[16px] md:text-[18px] font-poppins font-poppinsSemiBold text-textDark">
+              <h3 className="text-[18px] md:text-[18px] font-poppins font-poppinsSemiBold text-textDark">
                 Address
               </h3>
-              <p className="text-[14px] md:text-[16px] font-poppins font-poppinsRegular text-textMedium">
+              <p className="text-[16px] md:text-[16px] font-poppins font-poppinsRegular text-textMedium">
                 Shop No. 10, Shri Kishore Tower, Bajari Mandi Road, Sawranpuri,
                 Kanakpura, Jaipur, 302034
               </p>
             </div>
             <div>
-              <h3 className="text-[16px] md:text-[18px] font-poppins font-poppinsSemiBold text-textDark">
+              <h3 className="text-[18px] md:text-[18px] font-poppins font-poppinsSemiBold text-textDark">
                 Phone
               </h3>
               <div>
-                <p className="text-[14px] md:text-[16px] font-poppins font-poppinsRegular text-textMedium">
+                <p className="text-[16px] md:text-[16px] font-poppins font-poppinsRegular text-textMedium">
                   +91 7852000465
                 </p>
-                <p className="text-[14px] md:text-[16px] font-poppins font-poppinsRegular text-textMedium">
+                <p className="text-[16px] md:text-[16px] font-poppins font-poppinsRegular text-textMedium">
                   +91 7568428665
                 </p>
               </div>
             </div>
             <div>
-              <h3 className="text-[16px] md:text-[18px] font-poppins font-poppinsSemiBold text-textDark">
+              <h3 className="text-[18px] md:text-[18px] font-poppins font-poppinsSemiBold text-textDark">
                 Email
               </h3>
-              <p className="text-[14px] md:text-[16px] font-poppins font-poppinsRegular text-textMedium">
+              <p className="text-[16px] md:text-[16px] font-poppins font-poppinsRegular text-textMedium">
                 keshavpackerandmovers@gmail.com
               </p>
             </div>
             <div>
-              <h3 className="text-[16px] md:text-[18px] font-poppins font-poppinsSemiBold text-textDark">
+              <h3 className="text-[18px] md:text-[18px] font-poppins font-poppinsSemiBold text-textDark">
                 Follow Us
               </h3>
               <div className="flex space-x-4 mt-2">
@@ -132,8 +137,8 @@ export default function ContactPage() {
                     <Image
                       src={link.icon}
                       alt={`${link.name} social media icon - Connect with Keshav Packers and Movers`}
-                      width={24}
-                      height={24}
+                      width={32}
+                      height={32}
                       className="hover:opacity-80"
                     />
                   </Link>
@@ -146,7 +151,7 @@ export default function ContactPage() {
 
       {/* Google Map Embed */}
       <div className="mt-12">
-        <h2 className="text-subheading md:text-[24px] font-poppins font-poppinsBold text-textDark text-center mb-4">
+        <h2 className="text-[26px] md:text-[24px] font-poppins font-poppinsBold text-textDark text-center mb-4">
           Our Location
         </h2>
         <div className="w-full h-[400px] rounded-lg overflow-hidden">
@@ -164,14 +169,14 @@ export default function ContactPage() {
 
       {/* Business Hours */}
       <div className="mt-12">
-        <h2 className="text-subheading md:text-[24px] font-poppins font-poppinsBold text-textDark text-center mb-4">
+        <h2 className="text-[26px] md:text-[24px] font-poppins font-poppinsBold text-textDark text-center mb-4">
           Business Hours
         </h2>
         <div className="max-w-md mx-auto text-center">
-          <p className="text-[14px] md:text-[16px] font-poppins font-poppinsRegular text-textMedium">
-            Monday - Sunday: 9:00 AM - 6:00 PM
+          <p className="text-[16px] md:text-[16px] font-poppins font-poppinsRegular text-textMedium">
+            Monday - Saturday: 9:00 AM - 6:00 PM
           </p>
-          <p className="text-[14px] md:text-[16px] font-poppins font-poppinsRegular text-textMedium mt-2">
+          <p className="text-[16px] md:text-[16px] font-poppins font-poppinsRegular text-textMedium mt-2">
             We&apos;re available to assist you during these hours. For
             emergencies, please call us directly.
           </p>
@@ -180,7 +185,7 @@ export default function ContactPage() {
 
       {/* Contact FAQs */}
       <div className="mt-12">
-        <h2 className="text-subheading md:text-[24px] font-poppins font-poppinsBold text-textDark text-center mb-4">
+        <h2 className="text-[26px] md:text-[24px] font-poppins font-poppinsBold text-textDark text-center mb-4">
           Common Contact Questions
         </h2>
         <div className="space-y-4">

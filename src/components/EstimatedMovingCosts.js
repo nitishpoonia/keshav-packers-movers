@@ -7,60 +7,60 @@ export default function EstimatedMovingCosts({ scrollYProgress }) {
     {
       title: "1BHK Home",
       prices: [
-        { distance: "Up to 50km", cost: "₹7,000" },
-        { distance: "Up to 110km", cost: "₹9,500" },
-        { distance: "Up to 500km", cost: "₹15,000" },
-        { distance: "Up to 700km", cost: "₹20,000" },
+        { distance: "Intra City", cost: "₹7,000" },
+        { distance: "Intercity", cost: "₹9,500" },
+        { distance: "Interstate", cost: "₹15,000" },
+        { distance: "Long Distance", cost: "₹20,000" },
         { distance: "Across the Country", cost: "₹30,000" },
       ],
     },
     {
       title: "2BHK Home",
       prices: [
-        { distance: "Up to 50km", cost: "₹11,000" },
-        { distance: "Up to 110km", cost: "₹14,000" },
-        { distance: "Up to 500km", cost: "₹22,000" },
-        { distance: "Up to 700km", cost: "₹28,000" },
+        { distance: "Intra City", cost: "₹11,000" },
+        { distance: "Intercity", cost: "₹14,000" },
+        { distance: "Interstate", cost: "₹22,000" },
+        { distance: "Long Distance", cost: "₹28,000" },
         { distance: "Across the Country", cost: "₹40,000" },
       ],
     },
     {
       title: "3BHK Home",
       prices: [
-        { distance: "Up to 50km", cost: "₹15,000" },
-        { distance: "Up to 110km", cost: "₹18,000" },
-        { distance: "Up to 500km", cost: "₹30,000" },
-        { distance: "Up to 700km", cost: "₹38,000" },
+        { distance: "Intra City", cost: "₹15,000" },
+        { distance: "Intercity", cost: "₹18,000" },
+        { distance: "Interstate", cost: "₹30,000" },
+        { distance: "Long Distance", cost: "₹38,000" },
         { distance: "Across the Country", cost: "₹55,000" },
       ],
     },
     {
       title: "Bike/Car Relocation",
       prices: [
-        { distance: "Up to 50km", cost: "₹3,500" },
-        { distance: "Up to 110km", cost: "₹5,000" },
-        { distance: "Up to 500km", cost: "₹10,000" },
-        { distance: "Up to 700km", cost: "₹12,500" },
+        { distance: "Intra City", cost: "₹3,500" },
+        { distance: "Intercity", cost: "₹5,000" },
+        { distance: "Interstate", cost: "₹10,000" },
+        { distance: "Long Distance", cost: "₹12,500" },
         { distance: "Across the Country", cost: "₹18,000" },
       ],
     },
     {
       title: "Office Relocation",
       prices: [
-        { distance: "Up to 50km", cost: "₹20,000" },
-        { distance: "Up to 110km", cost: "₹25,000" },
-        { distance: "Up to 500km", cost: "₹40,000" },
-        { distance: "Up to 700km", cost: "₹50,000" },
+        { distance: "Intra City", cost: "₹20,000" },
+        { distance: "Intercity", cost: "₹25,000" },
+        { distance: "Interstate", cost: "₹40,000" },
+        { distance: "Long Distance", cost: "₹50,000" },
         { distance: "Across the Country", cost: "₹75,000" },
       ],
     },
   ];
 
   return (
-    <section className="relative bg-lightPeach py-12">
+    <section className="relative bg-lightPeach pb-12">
       <div className="container mx-auto px-4">
         {/* Title */}
-        <h2 className="text-heading sm:text-[40px] md:text-[48px] lg:text-[56px] font-poppins font-poppinsBold text-textDark text-center">
+        <h2 className="text-[30px] sm:text-[40px] md:text-[48px] lg:text-[56px] font-poppins font-poppinsBold text-textDark text-center">
           Estimated Moving Costs
         </h2>
 

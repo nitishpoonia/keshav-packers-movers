@@ -1,4 +1,5 @@
 import Header from "../components/Header";
+import InfoHeader from "../components/InfoHeader";
 import Footer from "../components/Footer";
 import "./globals.css";
 import { ContactFormProvider } from "@/context/ContactFormContext";
@@ -23,6 +24,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <ContactFormProvider>
+          <InfoHeader />
           <Header />
           {children}
           <FloatingButton />

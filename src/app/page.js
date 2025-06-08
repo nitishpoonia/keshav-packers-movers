@@ -17,7 +17,7 @@ export default function Home() {
       <WhyChooseKeshav />
       <OurProcessWrapper />
       <EstimatedMovingCostsWrapper />
-      <InlineContactForm />
+      {/* <InlineContactForm /> */}
       <FAQs />
       <ContactForm />
       <RecentBlogPosts />

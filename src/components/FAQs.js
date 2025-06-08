@@ -56,10 +56,10 @@ export default function FAQs() {
   ];
 
   return (
-    <section className="relative bg-lightPeach py-12">
+    <section className="relative bg-lightPeach">
       <div className="container mx-auto px-4">
         {/* Title */}
-        <h2 className="text-heading sm:text-[40px] md:text-[48px] lg:text-[56px] font-poppins font-poppinsBold text-textDark text-center">
+        <h2 className="text-[36px] sm:text-[40px] md:text-[48px] lg:text-[56px] font-poppins font-poppinsBold text-textDark text-center">
           Frequently Asked Questions
         </h2>
 

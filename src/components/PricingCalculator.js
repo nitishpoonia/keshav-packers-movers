@@ -78,7 +78,7 @@ export default function PricingCalculator({ pricingData, additionalServices }) {
         <div>
           <label
             htmlFor="serviceType"
-            className="block text-[14px] md:text-[16px] font-poppins font-poppinsSemiBold text-textDark mb-1"
+            className="block text-[18px] md:text-[18px] font-poppins font-poppinsSemiBold text-textDark mb-1"
           >
             Service Type
           </label>
@@ -87,7 +87,7 @@ export default function PricingCalculator({ pricingData, additionalServices }) {
             name="serviceType"
             value={formData.serviceType}
             onChange={handleInputChange}
-            className="w-full p-3 rounded-lg bg-gray-50 shadow-[0_2px_4px_rgba(0,0,0,0.1)] text-[13px] font-poppins font-poppinsRegular text-textDark focus:outline-none focus:ring-2 focus:ring-primary"
+            className="w-full p-3 rounded-lg bg-gray-50 shadow-[0_2px_4px_rgba(0,0,0,0.1)] text-[16px] font-poppins font-poppinsRegular text-textDark focus:outline-none focus:ring-2 focus:ring-primary"
             required
           >
             <option value="">Select a Service</option>
@@ -103,7 +103,7 @@ export default function PricingCalculator({ pricingData, additionalServices }) {
         <div>
           <label
             htmlFor="distance"
-            className="block text-[14px] md:text-[16px] font-poppins font-poppinsSemiBold text-textDark mb-1"
+            className="block text-[18px] md:text-[18px] font-poppins font-poppinsSemiBold text-textDark mb-1"
           >
             Distance
           </label>
@@ -112,7 +112,7 @@ export default function PricingCalculator({ pricingData, additionalServices }) {
             name="distance"
             value={formData.distance}
             onChange={handleInputChange}
-            className="w-full p-3 rounded-lg bg-gray-50 shadow-[0_2px_4px_rgba(0,0,0,0.1)] text-[13px] font-poppins font-poppinsRegular text-textDark focus:outline-none focus:ring-2 focus:ring-primary"
+            className="w-full p-3 rounded-lg bg-gray-50 shadow-[0_2px_4px_rgba(0,0,0,0.1)] text-[16px] font-poppins font-poppinsRegular text-textDark focus:outline-none focus:ring-2 focus:ring-primary"
             required
           >
             <option value="">Select Distance</option>
@@ -126,7 +126,7 @@ export default function PricingCalculator({ pricingData, additionalServices }) {
 
         {/* Additional Services (Checkboxes) */}
         <div>
-          <h3 className="text-[14px] md:text-[16px] font-poppins font-poppinsSemiBold text-textDark mb-2">
+          <h3 className="text-[18px] md:text-[18px] font-poppins font-poppinsSemiBold text-textDark mb-2">
             Additional Services
           </h3>
           <div className="space-y-2">
@@ -138,7 +138,7 @@ export default function PricingCalculator({ pricingData, additionalServices }) {
                 onChange={handleInputChange}
                 className="h-4 w-4 text-primary focus:ring-primary border-gray-300 rounded"
               />
-              <span className="text-[14px] font-poppins font-poppinsRegular text-textMedium">
+              <span className="text-[16px] font-poppins font-poppinsRegular text-textMedium">
                 Packing Services (₹2,000 - ₹5,000)
               </span>
             </label>
@@ -150,7 +150,7 @@ export default function PricingCalculator({ pricingData, additionalServices }) {
                 onChange={handleInputChange}
                 className="h-4 w-4 text-primary focus:ring-primary border-gray-300 rounded"
               />
-              <span className="text-[14px] font-poppins font-poppinsRegular text-textMedium">
+              <span className="text-[16px] font-poppins font-poppinsRegular text-textMedium">
                 Unpacking Services (₹1,500 - ₹3,000)
               </span>
             </label>
@@ -162,7 +162,7 @@ export default function PricingCalculator({ pricingData, additionalServices }) {
                 onChange={handleInputChange}
                 className="h-4 w-4 text-primary focus:ring-primary border-gray-300 rounded"
               />
-              <span className="text-[14px] font-poppins font-poppinsRegular text-textMedium">
+              <span className="text-[16px] font-poppins font-poppinsRegular text-textMedium">
                 Storage Solutions (₹3,000/month)
               </span>
             </label>
@@ -174,7 +174,7 @@ export default function PricingCalculator({ pricingData, additionalServices }) {
                 onChange={handleInputChange}
                 className="h-4 w-4 text-primary focus:ring-primary border-gray-300 rounded"
               />
-              <span className="text-[14px] font-poppins font-poppinsRegular text-textMedium">
+              <span className="text-[16px] font-poppins font-poppinsRegular text-textMedium">
                 Insurance Coverage (1% of base cost)
               </span>
             </label>

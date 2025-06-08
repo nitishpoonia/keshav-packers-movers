@@ -34,7 +34,7 @@ export default function OurProcess({ ref, scrollYProgress }) {
     <section ref={ref} className="relative bg-lightPeach py-12">
       <div className="container mx-auto px-4">
         {/* Heading */}
-        <h2 className="text-heading sm:text-[40px] md:text-[48px] lg:text-[56px] font-poppins font-poppinsBold text-textDark text-center mb-8">
+        <h2 className="text-[30px] sm:text-[40px] md:text-[48px] lg:text-[56px] font-poppins font-poppinsBold text-textDark text-center mb-8">
           Our Process
         </h2>
 
