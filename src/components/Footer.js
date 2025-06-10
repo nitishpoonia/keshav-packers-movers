@@ -745,7 +745,7 @@ export default function Footer() {
                 />
               </Link>
               <Link
-                href="https://www.instagram.com/keshavpackerandmovers/"
+                href="https://www.youtube.com/@KeshavPackersAndMovers"
                 target="_blank"
                 rel="noopener noreferrer"
               >
