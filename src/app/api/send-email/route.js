@@ -168,8 +168,8 @@ export async function POST(request) {
 
     // Construct the email options
     const mailOptions = {
-      from: process.env.EMAIL_USER, // Sender address
-      to: process.env.RECEIVER_EMAIL, // Receiver address (your email)
+      from: process.env.EMAIL_USER,
+      to: process.env.RECEIVER_EMAIL,
       subject: emailSubject,
       html: emailContent,
     };
@@ -184,13 +184,13 @@ export async function POST(request) {
         requestNumber: requestNumber || null,
         type: isQuoteRequest ? "quote" : "contact",
       },
-      { status: 200 }
+      { status: 200 },
     );
   } catch (error) {
     console.error("Error sending email:", error);
     return NextResponse.json(
       { error: "Failed to send email" },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }
