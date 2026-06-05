@@ -690,6 +690,22 @@ export default function Footer() {
                   Gallery
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/privacy-policy"
+                  className="text-[16px] sm:text-[16px] md:text-[18px] font-poppins font-poppinsRegular text-gray-300 hover:text-primary"
+                >
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/terms-conditions"
+                  className="text-[16px] sm:text-[16px] md:text-[18px] font-poppins font-poppinsRegular text-gray-300 hover:text-primary"
+                >
+                  Terms and Conditions
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -699,8 +715,8 @@ export default function Footer() {
             </h4>
             <ul className="mt-2 space-y-2">
               <li className="text-[16px] sm:text-[16px] md:text-[18px] font-poppins font-poppinsRegular text-gray-300">
-                Shop No. 10, Shri Kishore Tower, Bajari Mandi Road, Sawranpuri,
-                Kanakpura, Jaipur, 302034
+                Shop No. 4 Plot No. 123, Shree Ram Ji Bhawan Dhawas, Ajmer Road
+                Jaipur, Rajasthan, 302021
               </li>
               <li className="text-[16px] sm:text-[16px] md:text-[18px] font-poppins font-poppinsRegular text-gray-300">
                 Phone: +91 7852000465, +91 7568428665

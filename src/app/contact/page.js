@@ -14,7 +14,7 @@ const contactFAQs = [
   {
     question: "Can I visit your office?",
     answer:
-      "Yes, you're welcome to visit our office at Shop No. 10, Shri Kishore Tower, Bajari Mandi Road, Sawranpuri, Kanakpura, Jaipur, 302034. We're open Monday to Sunday from 9:00 AM to 6:00 PM. Please schedule an appointment for a smoother experience.",
+      "Yes, you're welcome to visit our office at Shop No. 4 Plot No. 123, Shree Ram Ji Bhawan Dhawas, Ajmer Road, Jaipur Tower, Bajari Mandi Road, Sawranpuri, Kanakpura, Jaipur, 302034. We're open Monday to Sunday from 9:00 AM to 6:00 PM. Please schedule an appointment for a smoother experience.",
   },
   {
     question: "What services can I inquire about?",
@@ -97,8 +97,8 @@ export default function ContactPage() {
                 Address
               </h3>
               <p className="text-[16px] md:text-[16px] font-poppins font-poppinsRegular text-textMedium">
-                Shop No. 10, Shri Kishore Tower, Bajari Mandi Road, Sawranpuri,
-                Kanakpura, Jaipur, 302034
+                Shop No. 4 Plot No. 123, Shree Ram Ji Bhawan Dhawas, Ajmer Road,
+                Jaipur, 302021
               </p>
             </div>
             <div>
@@ -214,7 +214,7 @@ export default function ContactPage() {
             address: {
               "@type": "PostalAddress",
               streetAddress:
-                "Shop No. 10, Shri Kishore Tower, Bajari Mandi Road, Sawranpuri, Kanakpura",
+                "Shop No. 4 Plot No. 123, Shree Ram Ji Bhawan Dhawas, Ajmer Road, Jaipur Tower, Bajari Mandi Road, Sawranpuri, Kanakpura",
               addressLocality: "Jaipur",
               addressRegion: "Rajasthan",
               postalCode: "302034",
